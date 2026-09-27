@@ -102,22 +102,10 @@ symlinks in step 4 — this one is uscc's own output directory).
 ### 6. Run it
 
 ```
-cd tests/parsing
-../../bin/uscc -a -l test002.usc
+bin/uscc -O -p -s tests/cse/quicksort.usc -o quicksort.s
 ```
 
-should print:
-
-```
-test002.usc:16:1: error: Function implementation missing
-{
-^
-1 Error(s)
-```
-
-(`test002.usc` is a fixture designed to fail, confirming the build
-works). From `uscc/`, run any `.usc` file (see [Example](#example)
-below):
+or write your own `.usc` file (see [Example](#example) below) and run:
 
 ```
 bin/uscc [OPTIONS] <input.usc>
