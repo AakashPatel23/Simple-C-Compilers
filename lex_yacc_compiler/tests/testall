@@ -1,0 +1,100 @@
+#!/bin/bash
+(cd ..; make clean; make)
+
+SCC=../scc
+GCC=gcc
+npass=0
+nfail=0
+maxtime=10
+
+rm -f results.txt
+
+# Limit size of files to 500K
+ulimit -f 5000
+
+# Not every machine has GNU coreutils' timeout; fall back to running
+# uncapped rather than silently skipping the step (see runtest()).
+if command -v timeout >/dev/null 2>&1; then
+  TIMEOUT="timeout $maxtime"
+else
+  TIMEOUT=
+fi
+
+# Test driver
+runtest() {
+  prog=$1
+  descr=$2
+  echo ----- $prog.c: $descr -----
+  rm -f $prog $prog.s $prog.scc $prog.gcc* $prog.out*
+
+  fail() {
+      echo "Test failed... ($1)"
+      printf "FAIL: %-15s: %s\n" "$prog" "$descr" >> results.txt
+      nfail=$((nfail + 1));
+  }
+
+  $TIMEOUT $SCC $prog.c
+  if [ ! -s $prog.s ]; then fail "scc did not produce $prog.s"; return; fi
+
+  $GCC -static -o $prog.scc $prog.s
+  if [ ! -x $prog.scc ]; then fail "failed to assemble $prog.s"; return; fi
+
+  $GCC -o $prog.gcc $prog.c >& $prog.gcc.out
+  if [ ! -x $prog.gcc ]; then fail "gcc failed to build $prog.c"; return; fi
+
+  $TIMEOUT ./$prog.scc > $prog.out.scc
+  $TIMEOUT ./$prog.gcc > $prog.out.gcc
+  if diff $prog.out.scc $prog.out.gcc; then
+      echo Test passed...;
+      printf "PASS: %-15s: %s\n" "$prog" "$descr" >> results.txt
+      npass=$((npass + 1));
+  else
+      fail "output mismatch"
+  fi
+}
+
+# List of tests running
+runtest test1 "Simple Hello Program";
+runtest global "Simple Test for Global Variables";
+runtest local "Simple Test for Local Variables";
+runtest args  "Simple Test for Arguments";
+runtest return "Simple Test for Arguments";
+runtest nested "Test for nested function";
+runtest div  "Test for division";
+runtest expr "Test expression";
+runtest expr2 "Test expression and vars";
+runtest rel  "Test Relational Operators";
+runtest equal "Test Equality Operators";
+runtest and  "Test And Operator";
+runtest or  "Test Or Operator";
+runtest if  "Test If Statement";
+runtest while "Test While Statement";
+runtest dowhile "Test Do/While Statement";
+runtest for  "Test For Statement";
+runtest break "Test break Statement";
+runtest continue "Test continue Statement";
+runtest array  "Test arrays 1";
+runtest array2 "Test arrays 2";
+runtest sum "Test sum of an array";
+runtest max "Test max of an array";
+runtest bubblesort "Bubble Sort of longs";
+runtest quicksort  "QuickSort of longs";
+runtest fact  "Test factorial";
+runtest ampersand "Test ampersand operator";
+runtest char "Array char access"
+runtest char2 "Array char assignment"
+runtest strlen "Compute strlen"
+runtest quicksortstr "Quicksort with strings"
+runtest queens "8 queens problem"
+runtest short_circuit "Test short circuit && and ||"
+runtest ternary "Test ternary operator"
+
+echo
+echo
+echo   "-------------------------------------------------"
+echo   "SCC Test Suite.   User:  $USER   "
+echo   "-------------------------------------------------"
+cat results.txt
+echo   "-------------------------------------------------"
+echo   "                              Passed: " $npass / $((npass + nfail))
+echo   "                              Passed: " $npass / $((npass + nfail)) >> results.txt

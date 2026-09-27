@@ -1,0 +1,35 @@
+FAIL: test1          : Simple Hello Program
+FAIL: global         : Simple Test for Global Variables
+FAIL: local          : Simple Test for Local Variables
+FAIL: args           : Simple Test for Arguments
+FAIL: return         : Simple Test for Arguments
+FAIL: nested         : Test for nested function
+FAIL: div            : Test for division
+FAIL: expr           : Test expression
+FAIL: expr2          : Test expression and vars
+FAIL: rel            : Test Relational Operators
+FAIL: equal          : Test Equality Operators
+FAIL: and            : Test And Operator
+FAIL: or             : Test Or Operator
+FAIL: if             : Test If Statement
+FAIL: while          : Test While Statement
+FAIL: dowhile        : Test Do/While Statement
+FAIL: for            : Test For Statement
+FAIL: break          : Test break Statement
+FAIL: continue       : Test continue Statement
+FAIL: array          : Test arrays 1
+FAIL: array2         : Test arrays 2
+FAIL: sum            : Test sum of an array
+FAIL: max            : Test max of an array
+FAIL: bubblesort     : Bubble Sort of longs
+FAIL: quicksort      : QuickSort of longs
+FAIL: fact           : Test factorial
+FAIL: ampersand      : Test ampersand operator
+FAIL: char           : Array char access
+FAIL: char2          : Array char assignment
+FAIL: strlen         : Compute strlen
+FAIL: quicksortstr   : Quicksort with strings
+FAIL: queens         : 8 queens problem
+FAIL: short_circuit  : Test short circuit && and ||
+FAIL: ternary        : Test ternary operator
+                              Passed:  0 / 34
