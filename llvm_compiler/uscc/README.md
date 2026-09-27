@@ -42,48 +42,82 @@ warnings.
 
 ## Building and running
 
+These steps follow the course's own PA0 installation guide (CS352,
+Purdue). They assume Ubuntu 22.04 or similar; Linux is required natively
+— on Windows use WSL, and on Apple Silicon Macs use an x86-64 VM (ARM
+Macs have known compatibility issues with this build). You'll need
+~5GB of free space.
+
 ### 1. Clone
 
 ```
 git clone https://github.com/AakashPatel23/Simple-C-Compilers.git
-cd Simple-C-Compilers/llvm_compiler/uscc
+cd Simple-C-Compilers/llvm_compiler
 ```
 
-Everything below is run from `uscc/` (this directory), not the repo root.
+Stay in `llvm_compiler/` (the parent of `uscc/`) for the LLVM build below
+— `uscc/`'s Makefiles expect `llvm/`, `bin/`, and `lib/` to exist as its
+siblings, not on `PATH`.
 
-### 2. Install LLVM 3.5
-
-This compiler links against LLVM 3.5's libraries, which predate modern
-package managers — you'll need to build it from source:
-
-```
-curl -LO https://releases.llvm.org/3.5.0/llvm-3.5.0.src.tar.xz
-tar xf llvm-3.5.0.src.tar.xz
-cd llvm-3.5.0.src
-./configure --enable-optimized
-make -j$(nproc)
-export PATH="$PWD/Release/bin:$PATH"   # so llvm-config is on PATH
-cd -
-```
-
-You'll also need a C++ compiler with `-fno-rtti` support (any recent
-g++/clang++ works).
-
-### 3. Build uscc
+### 2. Install prerequisites
 
 ```
+sudo apt-get install clang g++
+```
+
+### 3. Build LLVM 3.5 as a Debug+Asserts build
+
+```
+wget http://llvm.org/releases/3.5.0/llvm-3.5.0.src.tar.xz
+tar xJf llvm-3.5.0.src.tar.xz
+mv llvm-3.5.0.src llvm
+cd llvm
+./configure CC=clang CXX=clang++ --disable-optimized --with-python=`which python2`
 make
 ```
 
-This builds `bin/uscc`.
+This can take over an hour, but it's a one-time build.
 
-### 4. Run it
+### 4. Link `bin` and `lib`
 
 ```
-bin/uscc -O -p -s tests/cse/quicksort.usc -o quicksort.s
+cd ..
+ln -s llvm/Debug+Asserts/lib/ lib
+ln -s llvm/Debug+Asserts/bin/ bin
 ```
 
-or write your own `.usc` file (see [Example](#example) below) and run:
+You should now have `llvm/`, `bin`, `lib`, and `uscc/` as siblings inside
+`llvm_compiler/`.
+
+### 5. Build uscc
+
+```
+cd uscc
+make
+```
+
+This builds `uscc/bin/uscc` (a separate `bin/` from the `lib`/`bin`
+symlinks in step 4 — this one is uscc's own output directory).
+
+### 6. Run it
+
+```
+cd tests/parsing
+../../bin/uscc -a -l test002.usc
+```
+
+should print:
+
+```
+test002.usc:16:1: error: Function implementation missing
+{
+^
+1 Error(s)
+```
+
+(`test002.usc` is a fixture designed to fail, confirming the build
+works). From `uscc/`, run any `.usc` file (see [Example](#example)
+below):
 
 ```
 bin/uscc [OPTIONS] <input.usc>
@@ -117,7 +151,7 @@ int main() {
 ```
 
 ```
-$ uscc -O -p -s gcd.usc -o gcd.s
+$ bin/uscc -O -p -s gcd.usc -o gcd.s
 ```
 
 runs `gcd.usc` through parsing, semantic analysis, SSA construction, the
