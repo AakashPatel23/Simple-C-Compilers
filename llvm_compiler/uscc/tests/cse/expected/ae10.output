@@ -1,0 +1,38 @@
+********** Available Expressions Information **********
+********** Function: main, analysis iterates 12 times
+entry:
+  GEN:
+  KILL:
+  IN:
+  OUT:
+while.cond:
+  GEN: [0:   %lt = icmp slt i32 %Phi, 2] [1:   %0 = icmp ne i32 %zext, 0]
+  KILL: [2:   %mul = mul i32 1, %Phi2] [3:   %eq = icmp eq i32 %Phi, 0] [5:   %mul9 = mul i32 1, %Phi2] [6:   %mul4 = mul i32 1, %Phi2] [8:   %add = add i32 %Phi, 1]
+  IN:
+  OUT: [0:   %lt = icmp slt i32 %Phi, 2] [1:   %0 = icmp ne i32 %zext, 0]
+while.body:
+  GEN: [2:   %mul = mul i32 1, %Phi2] [3:   %eq = icmp eq i32 %Phi, 0] [4:   %1 = icmp ne i32 %zext3, 0]
+  KILL:
+  IN: [0:   %lt = icmp slt i32 %Phi, 2] [1:   %0 = icmp ne i32 %zext, 0]
+  OUT: [0:   %lt = icmp slt i32 %Phi, 2] [1:   %0 = icmp ne i32 %zext, 0] [2:   %mul = mul i32 1, %Phi2] [3:   %eq = icmp eq i32 %Phi, 0] [4:   %1 = icmp ne i32 %zext3, 0]
+while.end:
+  GEN: [5:   %mul9 = mul i32 1, %Phi2]
+  KILL:
+  IN: [0:   %lt = icmp slt i32 %Phi, 2] [1:   %0 = icmp ne i32 %zext, 0]
+  OUT: [0:   %lt = icmp slt i32 %Phi, 2] [1:   %0 = icmp ne i32 %zext, 0] [5:   %mul9 = mul i32 1, %Phi2]
+if.then:
+  GEN: [6:   %mul4 = mul i32 1, %Phi2]
+  KILL:
+  IN: [0:   %lt = icmp slt i32 %Phi, 2] [1:   %0 = icmp ne i32 %zext, 0] [2:   %mul = mul i32 1, %Phi2] [3:   %eq = icmp eq i32 %Phi, 0] [4:   %1 = icmp ne i32 %zext3, 0]
+  OUT: [0:   %lt = icmp slt i32 %Phi, 2] [1:   %0 = icmp ne i32 %zext, 0] [2:   %mul = mul i32 1, %Phi2] [3:   %eq = icmp eq i32 %Phi, 0] [4:   %1 = icmp ne i32 %zext3, 0] [6:   %mul4 = mul i32 1, %Phi2]
+if.else:
+  GEN: [7:   %mul5 = mul i32 1, 10]
+  KILL:
+  IN: [0:   %lt = icmp slt i32 %Phi, 2] [1:   %0 = icmp ne i32 %zext, 0] [2:   %mul = mul i32 1, %Phi2] [3:   %eq = icmp eq i32 %Phi, 0] [4:   %1 = icmp ne i32 %zext3, 0]
+  OUT: [0:   %lt = icmp slt i32 %Phi, 2] [1:   %0 = icmp ne i32 %zext, 0] [2:   %mul = mul i32 1, %Phi2] [3:   %eq = icmp eq i32 %Phi, 0] [4:   %1 = icmp ne i32 %zext3, 0] [7:   %mul5 = mul i32 1, 10]
+if.end:
+  GEN: [8:   %add = add i32 %Phi, 1]
+  KILL:
+  IN: [0:   %lt = icmp slt i32 %Phi, 2] [1:   %0 = icmp ne i32 %zext, 0] [2:   %mul = mul i32 1, %Phi2] [3:   %eq = icmp eq i32 %Phi, 0] [4:   %1 = icmp ne i32 %zext3, 0]
+  OUT: [0:   %lt = icmp slt i32 %Phi, 2] [1:   %0 = icmp ne i32 %zext, 0] [2:   %mul = mul i32 1, %Phi2] [3:   %eq = icmp eq i32 %Phi, 0] [4:   %1 = icmp ne i32 %zext3, 0] [8:   %add = add i32 %Phi, 1]
+

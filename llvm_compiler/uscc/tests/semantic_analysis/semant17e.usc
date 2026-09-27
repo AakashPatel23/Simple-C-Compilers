@@ -1,0 +1,42 @@
+// semant17e.usc
+
+int main()
+{
+	int x = 5;
+	printf("%d\n", x);
+    int b;
+    int a;
+    b = 0;
+    switch (b) {
+        case 0:
+          b += 100;
+          i = 0;
+          a = b + 3000;
+          break;
+        case 10:
+          b = b + 5000;
+          i = 3333;
+          i = b + 5000;
+          continue;
+        default:
+          b = b - 100;
+          a = b + 5000;
+    }
+    for (b = 1; b < 400; ++b) {
+        switch (b) {
+            case 0:
+              b += 100;
+              i = 0;
+              a = b + 3000;
+              break;
+            case 10:
+              b = b + 5000;
+              i = 3333;
+              i = b + 5000;
+              continue;
+            default:
+              b = b - 100;
+              a = b + 5000;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+********** USCC REGISTER ALLOCATION **********
+********** Function: printArray
+NUM_COLORS=2
+Found neighbors=0 for %vreg9 [480r,616r:0)  0@480r
+Removal: %vreg9 [480r,616r:0)  0@480r
+Spill candidate (neighbors=3, weight=0.0393042): %vreg2 [32r,480r:0)  0@32r
+Removal: %vreg2 [32r,480r:0)  0@32r
+Spill candidate (neighbors=2, weight=0.0417849): %vreg6 [16r,96r:0)[96r,464B:1)  0@16r 1@96r
+Removal: %vreg6 [16r,96r:0)[96r,464B:1)  0@16r 1@96r
+Found neighbors=1 for %vreg15 [272r,360r:0)  0@272r
+Removal: %vreg15 [272r,360r:0)  0@272r
+Found neighbors=0 for %vreg21 [144r,160B:0)[160B,416r:2)[416r,464B:1)[464B,480r:2)  0@144r 1@416r 2@160B-phi
+Removal: %vreg21 [144r,160B:0)[160B,416r:2)[416r,464B:1)[464B,480r:2)  0@144r 1@416r 2@160B-phi
+Assigning to physical register: %vreg21 [144r,160B:0)[160B,416r:2)[416r,464B:1)[464B,480r:2)  0@144r 1@416r 2@160B-phi
+Assigning to physical register: %vreg15 [272r,360r:0)  0@272r
+Assigning to physical register: %vreg6 [16r,96r:0)[96r,464B:1)  0@16r 1@96r
+Assigning to physical register: %vreg2 [32r,480r:0)  0@32r
+Assigning to physical register: %vreg9 [480r,616r:0)  0@480r
+********** USCC REGISTER ALLOCATION **********
+********** Function: main
+NUM_COLORS=2
+Found neighbors=0 for %vreg0 [112r,168r:0)  0@112r
+Removal: %vreg0 [112r,168r:0)  0@112r
+Assigning to physical register: %vreg0 [112r,168r:0)  0@112r

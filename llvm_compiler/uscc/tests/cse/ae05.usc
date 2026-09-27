@@ -1,0 +1,25 @@
+// ae05.usc
+
+int main() {
+    int a;
+    int b;
+    int c;
+    int x;
+    int y;
+    int z;
+
+    a = 1; b = 2; c = 3;
+    x = a + b;
+    y = a * c;
+
+    if (b > 0) {
+        a = 10;
+    } else {
+        // No kill
+    }
+    z = a + b;
+    x = a * c;
+
+    printf("z=%d, x=%d\n", z, x);
+    return 0;
+}

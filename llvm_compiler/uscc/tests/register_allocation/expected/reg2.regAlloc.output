@@ -1,0 +1,49 @@
+********** USCC REGISTER ALLOCATION **********
+********** Function: main
+NUM_COLORS=2
+Spill candidate (neighbors=11) pushed optimistically: %vreg59 [144r,336B:0)[336B,1216B:2)[1424B,2064r:2)[2064r,2272B:1)  0@144r 1@2064r 2@336B-phi
+Note: This node would have been spilled in Chaitin, but is pushed to stack optimistically.
+Removal: %vreg59 [144r,336B:0)[336B,1216B:2)[1424B,2064r:2)[2064r,2272B:1)  0@144r 1@2064r 2@336B-phi
+Spill candidate (neighbors=10) pushed optimistically: %vreg69 [320r,336B:0)[336B,576B:2)[624r,656r:6)[656r,688r:4)[688r,720r:5)[720r,752r:7)[752r,784r:8)[784r,816r:3)[816r,1216B:1)[1216B,1352r:2)[1424B,2272B:1)  0@320r 1@816r 2@336B-phi 3@784r 4@656r 5@688r 6@624r 7@720r 8@752r
+Note: This node would have been spilled in Chaitin, but is pushed to stack optimistically.
+Removal: %vreg69 [320r,336B:0)[336B,576B:2)[624r,656r:6)[656r,688r:4)[688r,720r:5)[720r,752r:7)[752r,784r:8)[784r,816r:3)[816r,1216B:1)[1216B,1352r:2)[1424B,2272B:1)  0@320r 1@816r 2@336B-phi 3@784r 4@656r 5@688r 6@624r 7@720r 8@752r
+Spill candidate (neighbors=9) pushed optimistically: %vreg75 [48r,336B:3)[336B,976r:4)[976r,1216B:0)[1424B,1664B:2)[1760r,2032B:1)[2032B,2272B:2)  0@976r 1@1760r 2@1424B-phi 3@48r 4@336B-phi
+Note: This node would have been spilled in Chaitin, but is pushed to stack optimistically.
+Removal: %vreg75 [48r,336B:3)[336B,976r:4)[976r,1216B:0)[1424B,1664B:2)[1760r,2032B:1)[2032B,2272B:2)  0@976r 1@1760r 2@1424B-phi 3@48r 4@336B-phi
+Spill candidate (neighbors=8) pushed optimistically: %vreg76 [64r,336B:3)[336B,944r:4)[944r,1216B:0)[1424B,1664B:2)[1744r,2032B:1)[2032B,2272B:2)  0@944r 1@1744r 2@1424B-phi 3@64r 4@336B-phi
+Note: This node would have been spilled in Chaitin, but is pushed to stack optimistically.
+Removal: %vreg76 [64r,336B:3)[336B,944r:4)[944r,1216B:0)[1424B,1664B:2)[1744r,2032B:1)[2032B,2272B:2)  0@944r 1@1744r 2@1424B-phi 3@64r 4@336B-phi
+Spill candidate (neighbors=7) pushed optimistically: %vreg74 [32r,336B:3)[336B,1008r:4)[1008r,1216B:0)[1424B,1664B:2)[1792r,2032B:1)[2032B,2272B:2)  0@1008r 1@1792r 2@1424B-phi 3@32r 4@336B-phi
+Note: This node would have been spilled in Chaitin, but is pushed to stack optimistically.
+Removal: %vreg74 [32r,336B:3)[336B,1008r:4)[1008r,1216B:0)[1424B,1664B:2)[1792r,2032B:1)[2032B,2272B:2)  0@1008r 1@1792r 2@1424B-phi 3@32r 4@336B-phi
+Spill candidate (neighbors=6) pushed optimistically: %vreg77 [96r,336B:3)[336B,880r:4)[880r,1216B:0)[1424B,1664B:2)[1728r,2032B:1)[2032B,2272B:2)  0@880r 1@1728r 2@1424B-phi 3@96r 4@336B-phi
+Note: This node would have been spilled in Chaitin, but is pushed to stack optimistically.
+Removal: %vreg77 [96r,336B:3)[336B,880r:4)[880r,1216B:0)[1424B,1664B:2)[1728r,2032B:1)[2032B,2272B:2)  0@880r 1@1728r 2@1424B-phi 3@96r 4@336B-phi
+Spill candidate (neighbors=5) pushed optimistically: %vreg73 [16r,336B:3)[336B,1040r:4)[1040r,1216B:0)[1424B,1664B:2)[1920r,2032B:1)[2032B,2272B:2)  0@1040r 1@1920r 2@1424B-phi 3@16r 4@336B-phi
+Note: This node would have been spilled in Chaitin, but is pushed to stack optimistically.
+Removal: %vreg73 [16r,336B:3)[336B,1040r:4)[1040r,1216B:0)[1424B,1664B:2)[1920r,2032B:1)[2032B,2272B:2)  0@1040r 1@1920r 2@1424B-phi 3@16r 4@336B-phi
+Spill candidate (neighbors=4) pushed optimistically: %vreg80 [112r,336B:4)[336B,848r:0)[848r,1216B:1)[1424B,1664B:3)[2000r,2032B:2)[2032B,2272B:3)  0@336B-phi 1@848r 2@2000r 3@1424B-phi 4@112r
+Note: This node would have been spilled in Chaitin, but is pushed to stack optimistically.
+Removal: %vreg80 [112r,336B:4)[336B,848r:0)[848r,1216B:1)[1424B,1664B:3)[2000r,2032B:2)[2032B,2272B:3)  0@336B-phi 1@848r 2@2000r 3@1424B-phi 4@112r
+Spill candidate (neighbors=3) pushed optimistically: %vreg83 [80r,336B:4)[336B,912r:2)[912r,1216B:3)[1424B,1696r:0)[1696r,2032B:1)[2032B,2272B:0)  0@1424B-phi 1@1696r 2@336B-phi 3@912r 4@80r
+Note: This node would have been spilled in Chaitin, but is pushed to stack optimistically.
+Removal: %vreg83 [80r,336B:4)[336B,912r:2)[912r,1216B:3)[1424B,1696r:0)[1696r,2032B:1)[2032B,2272B:0)  0@1424B-phi 1@1696r 2@336B-phi 3@912r 4@80r
+Spill candidate (neighbors=2) pushed optimistically: %vreg71 [304r,336B:3)[336B,1216B:0)[1424B,1824r:2)[1824r,2032B:1)[2032B,2272B:2)  0@336B-phi 1@1824r 2@1424B-phi 3@304r
+Note: This node would have been spilled in Chaitin, but is pushed to stack optimistically.
+Removal: %vreg71 [304r,336B:3)[336B,1216B:0)[1424B,1824r:2)[1824r,2032B:1)[2032B,2272B:2)  0@336B-phi 1@1824r 2@1424B-phi 3@304r
+Found neighbors=1 for %vreg79 [128r,336B:3)[336B,1216B:0)[1424B,1568r:2)[1600r,1696r:4)[1856r,2032B:1)[2032B,2272B:4)  0@336B-phi 1@1856r 2@1424B-phi 3@128r 4@1600r
+Removal: %vreg79 [128r,336B:3)[336B,1216B:0)[1424B,1568r:2)[1600r,1696r:4)[1856r,2032B:1)[2032B,2272B:4)  0@336B-phi 1@1856r 2@1424B-phi 3@128r 4@1600r
+Found neighbors=0 for %vreg84 [1568r,2000r:0)  0@1568r
+Removal: %vreg84 [1568r,2000r:0)  0@1568r
+Assigning to physical register RAX: %vreg84 [1568r,2000r:0)  0@1568r
+Assigning to physical register RCX: %vreg79 [128r,336B:3)[336B,1216B:0)[1424B,1568r:2)[1600r,1696r:4)[1856r,2032B:1)[2032B,2272B:4)  0@336B-phi 1@1856r 2@1424B-phi 3@128r 4@1600r
+Assigning to physical register EDX: %vreg71 [304r,336B:3)[336B,1216B:0)[1424B,1824r:2)[1824r,2032B:1)[2032B,2272B:2)  0@336B-phi 1@1824r 2@1424B-phi 3@304r
+Assigning to physical register RSI: %vreg83 [80r,336B:4)[336B,912r:2)[912r,1216B:3)[1424B,1696r:0)[1696r,2032B:1)[2032B,2272B:0)  0@1424B-phi 1@1696r 2@336B-phi 3@912r 4@80r
+Assigning to physical register RDI: %vreg80 [112r,336B:4)[336B,848r:0)[848r,1216B:1)[1424B,1664B:3)[2000r,2032B:2)[2032B,2272B:3)  0@336B-phi 1@848r 2@2000r 3@1424B-phi 4@112r
+Assigning to physical register R8D: %vreg73 [16r,336B:3)[336B,1040r:4)[1040r,1216B:0)[1424B,1664B:2)[1920r,2032B:1)[2032B,2272B:2)  0@1040r 1@1920r 2@1424B-phi 3@16r 4@336B-phi
+Assigning to physical register R9D: %vreg77 [96r,336B:3)[336B,880r:4)[880r,1216B:0)[1424B,1664B:2)[1728r,2032B:1)[2032B,2272B:2)  0@880r 1@1728r 2@1424B-phi 3@96r 4@336B-phi
+Assigning to physical register R10D: %vreg74 [32r,336B:3)[336B,1008r:4)[1008r,1216B:0)[1424B,1664B:2)[1792r,2032B:1)[2032B,2272B:2)  0@1008r 1@1792r 2@1424B-phi 3@32r 4@336B-phi
+Assigning to physical register R11D: %vreg76 [64r,336B:3)[336B,944r:4)[944r,1216B:0)[1424B,1664B:2)[1744r,2032B:1)[2032B,2272B:2)  0@944r 1@1744r 2@1424B-phi 3@64r 4@336B-phi
+Assigning to physical register EBX: %vreg75 [48r,336B:3)[336B,976r:4)[976r,1216B:0)[1424B,1664B:2)[1760r,2032B:1)[2032B,2272B:2)  0@976r 1@1760r 2@1424B-phi 3@48r 4@336B-phi
+Assigning to physical register EBP: %vreg69 [320r,336B:0)[336B,576B:2)[624r,656r:6)[656r,688r:4)[688r,720r:5)[720r,752r:7)[752r,784r:8)[784r,816r:3)[816r,1216B:1)[1216B,1352r:2)[1424B,2272B:1)  0@320r 1@816r 2@336B-phi 3@784r 4@656r 5@688r 6@624r 7@720r 8@752r
+Assigning to physical register R14D: %vreg59 [144r,336B:0)[336B,1216B:2)[1424B,2064r:2)[2064r,2272B:1)  0@144r 1@2064r 2@336B-phi

@@ -1,0 +1,10 @@
+semant13e.usc:8:10: error: Illegal break statement
+    break;
+         ^
+semant13e.usc:10:13: error: Illegal continue statement
+    continue;
+            ^
+semant13e.usc:11:1: error: USC requires non-void functions to end with a return
+}
+^
+3 Error(s)

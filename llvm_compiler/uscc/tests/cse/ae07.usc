@@ -1,0 +1,27 @@
+// ae07.usc
+
+int main() {
+    int a;
+    int b;
+    int x;
+    int mode;
+
+    a = 1;
+    b = 2;
+    mode = 1;
+    x = a * b;
+
+    switch (mode) {
+        case 1:
+            x = a * b;
+        case 2:
+            a = 10;
+            break;
+        default:
+            b = 20;
+            break;
+    }
+    x = a * b;
+    printf("x=%d\n", x);
+    return 0;
+}

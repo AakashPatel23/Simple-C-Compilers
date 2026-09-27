@@ -1,0 +1,6 @@
+semant01e.usc:24:9: error: Use of undeclared identifier 'x'
+	return x;
+	       ^
+semant01e.usc:23:14: warn: warning: ignoring return value of function 'compute'
+    compute();
+             ^

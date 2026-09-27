@@ -1,0 +1,4 @@
+llvm_compiler/bin/
+llvm_compiler/lib/
+llvm_compiler/llvm/
+llvm_compiler/uscc/bin/

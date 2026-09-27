@@ -1,0 +1,12 @@
+semant04e.usc:28:2: error: Use of undeclared identifier 'z'
+	z = x + y;
+	^
+semant04e.usc:33:1: error: USC requires non-void functions to end with a return
+}
+^
+semant04e.usc:18:13: warn: warning: declaration of 'b' shadows a previous declaration
+        int b = 5;
+            ^
+semant04e.usc:30:13: warn: warning: declaration of 'd' shadows a previous declaration
+        int d = 44;
+            ^

@@ -1,0 +1,18 @@
+// ae09.usc
+
+int main() {
+    int a;
+    int b;
+    int x;
+    int y;
+    int z;
+
+    a = 1; b = 2;
+    x = a + b;
+    a = 10;
+    y = a + b;
+    z = a + b;
+    
+    printf("z=%d\n", z);
+    return 0;
+}

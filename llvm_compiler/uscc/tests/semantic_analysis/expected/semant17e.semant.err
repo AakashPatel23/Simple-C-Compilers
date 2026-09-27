@@ -1,0 +1,109 @@
+semant17e.usc:8:5: error: Declarations are only allowed at the beginning of a scope block
+    int b;
+    ^
+semant17e.usc:9:5: error: Declarations are only allowed at the beginning of a scope block
+    int a;
+    ^
+semant17e.usc:10:5: error: Use of undeclared identifier 'b'
+    b = 0;
+    ^
+semant17e.usc:11:13: error: Use of undeclared identifier 'b'
+    switch (b) {
+            ^
+semant17e.usc:13:11: error: Use of undeclared identifier 'b'
+          b += 100;
+          ^
+semant17e.usc:14:11: error: Use of undeclared identifier 'i'
+          i = 0;
+          ^
+semant17e.usc:15:11: error: Use of undeclared identifier 'a'
+          a = b + 3000;
+          ^
+semant17e.usc:15:15: error: Use of undeclared identifier 'b'
+          a = b + 3000;
+              ^
+semant17e.usc:18:11: error: Use of undeclared identifier 'b'
+          b = b + 5000;
+          ^
+semant17e.usc:18:15: error: Use of undeclared identifier 'b'
+          b = b + 5000;
+              ^
+semant17e.usc:19:11: error: Use of undeclared identifier 'i'
+          i = 3333;
+          ^
+semant17e.usc:20:11: error: Use of undeclared identifier 'i'
+          i = b + 5000;
+          ^
+semant17e.usc:20:15: error: Use of undeclared identifier 'b'
+          i = b + 5000;
+              ^
+semant17e.usc:21:19: error: Illegal continue statement
+          continue;
+                  ^
+semant17e.usc:23:11: error: Use of undeclared identifier 'b'
+          b = b - 100;
+          ^
+semant17e.usc:23:15: error: Use of undeclared identifier 'b'
+          b = b - 100;
+              ^
+semant17e.usc:24:11: error: Use of undeclared identifier 'a'
+          a = b + 5000;
+          ^
+semant17e.usc:24:15: error: Use of undeclared identifier 'b'
+          a = b + 5000;
+              ^
+semant17e.usc:26:10: error: Use of undeclared identifier 'b'
+    for (b = 1; b < 400; ++b) {
+         ^
+semant17e.usc:26:17: error: Use of undeclared identifier 'b'
+    for (b = 1; b < 400; ++b) {
+                ^
+semant17e.usc:26:28: error: Use of undeclared identifier 'b'
+    for (b = 1; b < 400; ++b) {
+                           ^
+semant17e.usc:27:17: error: Use of undeclared identifier 'b'
+        switch (b) {
+                ^
+semant17e.usc:29:15: error: Use of undeclared identifier 'b'
+              b += 100;
+              ^
+semant17e.usc:30:15: error: Use of undeclared identifier 'i'
+              i = 0;
+              ^
+semant17e.usc:31:15: error: Use of undeclared identifier 'a'
+              a = b + 3000;
+              ^
+semant17e.usc:31:19: error: Use of undeclared identifier 'b'
+              a = b + 3000;
+                  ^
+semant17e.usc:34:15: error: Use of undeclared identifier 'b'
+              b = b + 5000;
+              ^
+semant17e.usc:34:19: error: Use of undeclared identifier 'b'
+              b = b + 5000;
+                  ^
+semant17e.usc:35:15: error: Use of undeclared identifier 'i'
+              i = 3333;
+              ^
+semant17e.usc:36:15: error: Use of undeclared identifier 'i'
+              i = b + 5000;
+              ^
+semant17e.usc:36:19: error: Use of undeclared identifier 'b'
+              i = b + 5000;
+                  ^
+semant17e.usc:39:15: error: Use of undeclared identifier 'b'
+              b = b - 100;
+              ^
+semant17e.usc:39:19: error: Use of undeclared identifier 'b'
+              b = b - 100;
+                  ^
+semant17e.usc:40:15: error: Use of undeclared identifier 'a'
+              a = b + 5000;
+              ^
+semant17e.usc:40:19: error: Use of undeclared identifier 'b'
+              a = b + 5000;
+                  ^
+semant17e.usc:43:1: error: USC requires non-void functions to end with a return
+}
+^
+36 Error(s)

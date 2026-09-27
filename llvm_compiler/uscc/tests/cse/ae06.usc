@@ -1,0 +1,28 @@
+// ae06.usc
+
+int main() {
+    int a;
+    int b;
+    int x;
+    int mode;
+
+    a = 5;
+    b = 10;
+    x = a + b;
+    mode = 1;
+
+    switch (mode) {
+        case 1:
+            a = 0;
+            break;
+        case 2:
+            b = 0;
+            break;
+        default:
+            // No kill
+            break;
+    }
+    x = a + b;
+    printf("x=%d\n", x);
+    return 0;
+}

@@ -1,0 +1,15 @@
+// testing do-while statement - 2
+// test023.usc
+
+int main(){
+  int i;
+  int b;
+  b = 0;
+  do {
+    for (i = 0; i < 10; ++i) {
+        b = i * 40;
+        b += 200;
+    }
+  } while (i < 10);
+  return b;
+}

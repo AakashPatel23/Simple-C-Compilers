@@ -1,0 +1,30 @@
+// semant03e.usc
+// Tests variable declarations
+// in two scopes.
+// Expected: Semantic error for undefined
+// identifier "y" on the return statement,
+// because "y" is out of scope
+//---------------------------------------------------------
+// Copyright (c) 2014, Sanjay Madhav
+// All rights reserved.
+//
+// This file is distributed under the BSD license.
+// See LICENSE.TXT for details.
+//---------------------------------------------------------
+// Extended for semantic warning
+
+int compute() {
+    return 43;
+}
+
+int main()
+{
+	int x;
+    int z = compute();
+    int a[3];
+	{
+		int y;
+        a[4] = 33;
+	}
+	return x + y;
+}

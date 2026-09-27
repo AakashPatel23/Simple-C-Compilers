@@ -1,0 +1,51 @@
+test012.usc:29:6: error: Use of undeclared identifier 'z'
+	if (z == 2)
+	    ^
+test012.usc:32:6: error: Use of undeclared identifier 'x'
+	if (x == 5)
+	    ^
+test012.usc:35:3: error: Use of undeclared identifier 'y'
+		y = 7 + 8 * 2;
+		^
+test012.usc:37:11: error: Use of undeclared identifier 'x'
+	else if (x == 4)
+	         ^
+test012.usc:39:5: error: Use of undeclared identifier 'x'
+		--x;
+		  ^
+test012.usc:41:11: error: Use of undeclared identifier 'x'
+	else if (x == 3)
+	         ^
+test012.usc:43:3: error: Use of undeclared identifier 'y'
+		y = y * y;
+		^
+test012.usc:43:7: error: Use of undeclared identifier 'y'
+		y = y * y;
+		    ^
+test012.usc:43:11: error: Use of undeclared identifier 'y'
+		y = y * y;
+		        ^
+test012.usc:47:3: error: Use of undeclared identifier 'z'
+		z = 42;
+		^
+test012.usc:51:9: error: Use of undeclared identifier 'z'
+        z -= 3;
+        ^
+test012.usc:52:13: error: Use of undeclared identifier 'z'
+        if (z > 0) {
+            ^
+test012.usc:55:14: error: Use of undeclared identifier 'z'
+    } while (z < 10)
+             ^
+test012.usc:56:1: error: Expected: ; but saw: }
+}
+^
+test012.usc:57:1: error: Unexpected end of file
+
+^
+test012.usc:57:1: error: Unexpected end of file
+
+^
+test012.usc:57:1: error: Unexpected end of file
+
+^

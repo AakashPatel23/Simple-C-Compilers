@@ -1,0 +1,29 @@
+// emit05.usc
+// Tests assigning a string at assignment
+// (requires a llvm.memcpy)
+// Expected output:
+// It worked!
+//---------------------------------------------------------
+// Copyright (c) 2014, Sanjay Madhav
+// All rights reserved.
+//
+// This file is distributed under the BSD license.
+// See LICENSE.TXT for details.
+//---------------------------------------------------------
+
+int main() {
+    int z = 0;
+    int i = 0;
+    int y = 20;
+    int unused = 2000;
+    while (i < 5) {
+        z = 10;
+        if (z == 10){
+           unused = 20;
+	}
+        i = i + 1;
+    }
+    printf("%d\n", z);
+    return 0;
+}
+

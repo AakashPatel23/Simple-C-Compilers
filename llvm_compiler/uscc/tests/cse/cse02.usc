@@ -1,0 +1,26 @@
+// cse02.usc
+// CSE across if branches (computed before).
+
+int main() {
+    int a;
+    int b;
+    int c;
+    int x;
+    int y;
+    int z;
+
+    a = 5;
+    b = 3;
+    c = 1;
+    x = a * b; // Compute a * b
+
+    if (c > 0) {
+        y = a * b; // CSE should reuse x
+    } else {
+        z = a * b; // CSE should reuse x
+        y = z; // Ensure y is assigned
+    }
+
+    printf("y=%d\n", y); // Expected: y=15
+    return 0;
+}

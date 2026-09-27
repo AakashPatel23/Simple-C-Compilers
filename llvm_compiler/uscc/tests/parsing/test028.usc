@@ -1,0 +1,24 @@
+// testing switch-case - 4
+// test028.usc
+
+int main(){
+  int i;
+  int b;
+  int a;
+  b = 0;
+  switch (b) {
+      case 0:
+        b += 100;
+        i = 0;
+        a = b + 3000;
+      case 10:
+        b = b + 5000;
+        i = 3333;
+        i = b + 5000;
+      case 30:
+        b += 100;
+        i = 0;
+        i = b + 4000;
+  }
+  return 0;
+}

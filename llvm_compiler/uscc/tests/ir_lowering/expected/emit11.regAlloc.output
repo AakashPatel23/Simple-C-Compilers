@@ -1,0 +1,18 @@
+********** USCC REGISTER ALLOCATION **********
+********** Function: main
+NUM_COLORS=2
+Spill candidate (neighbors=4, weight=0.0784131): %vreg0 [208r,736B:0)[800B,896r:0)  0@208r
+Removal: %vreg0 [208r,736B:0)[800B,896r:0)  0@208r
+Found neighbors=1 for %vreg8 [272r,336B:0)[368r,400B:1)[400B,432r:2)  0@272r 1@368r 2@400B-phi
+Removal: %vreg8 [272r,336B:0)[368r,400B:1)[400B,432r:2)  0@272r 1@368r 2@400B-phi
+Spill candidate (neighbors=2, weight=0.0951363): %vreg21 [32r,176B:0)[176B,208r:3)[512r,736B:1)[896r,944B:2)  0@32r 1@512r 2@896r 3@176B-phi
+Removal: %vreg21 [32r,176B:0)[176B,208r:3)[512r,736B:1)[896r,944B:2)  0@32r 1@512r 2@896r 3@176B-phi
+Found neighbors=1 for %vreg4 [640r,736B:0)[800B,912r:0)  0@640r
+Removal: %vreg4 [640r,736B:0)[800B,912r:0)  0@640r
+Found neighbors=0 for %vreg24 [16r,176B:1)[176B,656r:0)[688r,736B:2)[912r,944B:3)  0@176B-phi 1@16r 2@688r 3@912r
+Removal: %vreg24 [16r,176B:1)[176B,656r:0)[688r,736B:2)[912r,944B:3)  0@176B-phi 1@16r 2@688r 3@912r
+Assigning to physical register: %vreg24 [16r,176B:1)[176B,656r:0)[688r,736B:2)[912r,944B:3)  0@176B-phi 1@16r 2@688r 3@912r
+Assigning to physical register: %vreg4 [640r,736B:0)[800B,912r:0)  0@640r
+Assigning to physical register: %vreg21 [32r,176B:0)[176B,208r:3)[512r,736B:1)[896r,944B:2)  0@32r 1@512r 2@896r 3@176B-phi
+Assigning to physical register: %vreg8 [272r,336B:0)[368r,400B:1)[400B,432r:2)  0@272r 1@368r 2@400B-phi
+Assigning to physical register: %vreg0 [208r,736B:0)[800B,896r:0)  0@208r

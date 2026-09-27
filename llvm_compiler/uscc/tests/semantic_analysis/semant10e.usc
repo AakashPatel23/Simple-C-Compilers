@@ -1,0 +1,28 @@
+// semant10e.usc
+// Basic type error checking
+// for expression ops
+// 5 errors expected
+//---------------------------------------------------------
+// Copyright (c) 2014, Sanjay Madhav
+// All rights reserved.
+//
+// This file is distributed under the BSD license.
+// See LICENSE.TXT for details.
+//---------------------------------------------------------
+// Extended for semantic warning
+
+int main()
+{
+	int a;
+	a = "Stuff" && "Stuff";
+	a = "Stuff" || "Stuff";
+	a = "Stuff" + "Stuff";
+	a = "Stuff" * "Stuff";
+	a = !"Stuff";
+    if (a > 0) {
+        int a = 40;
+        int b;
+        b[0] = 30;
+    }
+	return 0;
+}

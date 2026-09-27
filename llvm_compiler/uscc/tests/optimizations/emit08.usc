@@ -1,0 +1,36 @@
+// emit08.usc
+// Tests stack variable allocations
+// A poorly implemented solution (eg. lazy alloca calls)
+// will likely result in a stack overflow
+// Expected result (will take a few seconds to run)
+// 2000000000
+//---------------------------------------------------------
+// Copyright (c) 2014, Sanjay Madhav
+// All rights reserved.
+//
+// This file is distributed under the BSD license.
+// See LICENSE.TXT for details.
+//---------------------------------------------------------
+
+int main() {
+    int i = 0;
+    int x = 0;
+    int y = 1;
+    int k = 5;
+    int unused = 300;
+    while (i < 3){
+       if (i == 1){
+         y = 2;
+       }
+       i = i + 1;
+       x = 10;
+       k = 20;
+       if (k == 20){
+          unused = 20;
+       }
+    }
+    y = 20;
+    printf("%d\n", y);
+    return 0;
+}
+

@@ -1,0 +1,22 @@
+// cse09.usc
+// Common subexpression within larger expressions, with kill.
+
+int main() {
+    int a;
+    int b;
+    int c;
+    int x;
+    int y;
+    int temp; // Hold subexpression a * b
+
+    a = 2; b = 3; c = 4;
+
+    temp = a * b;   // Compute e1: a * b
+    x = temp + c;   // Use e1
+
+    // CSE should realize 'a * b' is available via 'temp'
+    y = (a * b) - c; // Reuse e1 (temp) for the (a * b) part
+
+    printf("x=%d, y=%d\n", x, y); // Expected: x=10, y=2
+    return 0;
+}

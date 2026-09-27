@@ -1,0 +1,17 @@
+********** USCC REGISTER ALLOCATION **********
+********** Function: main
+NUM_COLORS=2
+Spill candidate (neighbors=3) pushed optimistically: %vreg14 [80r,96B:0)[96B,208B:2)[320r,352B:1)[352B,488r:2)  0@80r 1@320r 2@96B-phi
+Note: This node would have been spilled in Chaitin, but is pushed to stack optimistically.
+Removal: %vreg14 [80r,96B:0)[96B,208B:2)[320r,352B:1)[352B,488r:2)  0@80r 1@320r 2@96B-phi
+Spill candidate (neighbors=2) pushed optimistically: %vreg12 [32r,96B:0)[96B,144r:2)[272r,352B:1)  0@32r 1@272r 2@96B-phi
+Note: This node would have been spilled in Chaitin, but is pushed to stack optimistically.
+Removal: %vreg12 [32r,96B:0)[96B,144r:2)[272r,352B:1)  0@32r 1@272r 2@96B-phi
+Found neighbors=1 for %vreg13 [16r,96B:0)[96B,240r:2)[240r,352B:1)  0@16r 1@240r 2@96B-phi
+Removal: %vreg13 [16r,96B:0)[96B,240r:2)[240r,352B:1)  0@16r 1@240r 2@96B-phi
+Found neighbors=0 for %vreg15 [144r,320r:0)  0@144r
+Removal: %vreg15 [144r,320r:0)  0@144r
+Assigning to physical register RAX: %vreg15 [144r,320r:0)  0@144r
+Assigning to physical register ECX: %vreg13 [16r,96B:0)[96B,240r:2)[240r,352B:1)  0@16r 1@240r 2@96B-phi
+Assigning to physical register EDX: %vreg12 [32r,96B:0)[96B,144r:2)[272r,352B:1)  0@32r 1@272r 2@96B-phi
+Assigning to physical register ESI: %vreg14 [80r,96B:0)[96B,208B:2)[320r,352B:1)[352B,488r:2)  0@80r 1@320r 2@96B-phi

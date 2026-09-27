@@ -1,0 +1,16 @@
+// semant16e.usc
+
+int main()
+{
+	int x = 5;
+	printf("%d\n", x);
+    while (x < 300) {
+        if (i > 40) {
+            break;
+        }
+        else {
+            x = x + 3333;
+            continue;
+        }
+    }
+}

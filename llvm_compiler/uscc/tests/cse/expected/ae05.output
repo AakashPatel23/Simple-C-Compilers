@@ -1,0 +1,23 @@
+********** Available Expressions Information **********
+********** Function: main, analysis iterates 4 times
+entry:
+  GEN:
+  KILL:
+  IN:
+  OUT:
+if.then:
+  GEN:
+  KILL:
+  IN:
+  OUT:
+if.else:
+  GEN:
+  KILL:
+  IN:
+  OUT:
+if.end:
+  GEN: [0:   %add = add i32 %Phi, 2] [1:   %mul = mul i32 %Phi, 3]
+  KILL:
+  IN:
+  OUT: [0:   %add = add i32 %Phi, 2] [1:   %mul = mul i32 %Phi, 3]
+

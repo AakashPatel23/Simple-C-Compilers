@@ -1,0 +1,25 @@
+// cse06.usc
+// Multiple interacting CSE opportunities.
+
+int main() {
+    int a;
+    int b;
+    int c;
+    int x1;
+    int y1;
+    int x2;
+    int y2;
+    int z; // Usage
+
+    a = 2; b = 3; c = 4;
+    x1 = a + b; // Compute e1: a + b
+    y1 = b * c; // Compute e2: b * c
+
+    z = x1 + y1; // Use results
+
+    x2 = a + b; // Reuse e1
+    y2 = b * c; // Reuse e2
+
+    printf("x2=%d, y2=%d, z=%d\n", x2, y2, z); // Expected: x2=5, y2=12, z=17
+    return 0;
+}

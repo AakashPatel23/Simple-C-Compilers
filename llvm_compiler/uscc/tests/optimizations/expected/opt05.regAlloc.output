@@ -1,0 +1,18 @@
+********** USCC REGISTER ALLOCATION **********
+********** Function: main
+NUM_COLORS=2
+Found neighbors=0 for %vreg4 [16r,32r:0)  0@16r
+Removal: %vreg4 [16r,32r:0)  0@16r
+Found neighbors=0 for %vreg5 [48r,64r:0)  0@48r
+Removal: %vreg5 [48r,64r:0)  0@48r
+Found neighbors=1 for %vreg7 [96r,128r:0)[128r,160r:1)  0@96r 1@128r
+Removal: %vreg7 [96r,128r:0)[128r,160r:1)  0@96r 1@128r
+Found neighbors=1 for %vreg9 [160r,512B:0)  0@160r
+Removal: %vreg9 [160r,512B:0)  0@160r
+Found neighbors=0 for %vreg15 [80r,256B:0)[256B,304r:2)[304r,512B:1)  0@80r 1@304r 2@256B-phi
+Removal: %vreg15 [80r,256B:0)[256B,304r:2)[304r,512B:1)  0@80r 1@304r 2@256B-phi
+Assigning to physical register: %vreg15 [80r,256B:0)[256B,304r:2)[304r,512B:1)  0@80r 1@304r 2@256B-phi
+Assigning to physical register: %vreg9 [160r,512B:0)  0@160r
+Assigning to physical register: %vreg7 [96r,128r:0)[128r,160r:1)  0@96r 1@128r
+Assigning to physical register: %vreg5 [48r,64r:0)  0@48r
+Assigning to physical register: %vreg4 [16r,32r:0)  0@16r

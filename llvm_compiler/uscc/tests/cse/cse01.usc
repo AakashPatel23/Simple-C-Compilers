@@ -1,0 +1,19 @@
+// cse01.usc
+// Simple CSE within a basic block.
+
+int main() {
+    int a;
+    int b;
+    int x;
+    int y;
+    int z; // To prevent DCE from removing x
+
+    a = 10;
+    b = 20;
+    x = a + b; // Compute a + b
+    z = x + 1; // Use x
+    y = a + b; // CSE should replace this with x
+
+    printf("y=%d, z=%d\n", y, z); // Expected: y=30, z=31
+    return 0;
+}

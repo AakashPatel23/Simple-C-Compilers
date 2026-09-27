@@ -1,0 +1,10 @@
+semant15e.usc:9:13: error: Use of undeclared identifier 'i'
+        if (i > 40) {
+            ^
+semant15e.usc:16:13: error: Use of undeclared identifier 'i'
+    } while(i < 300);
+            ^
+semant15e.usc:17:1: error: USC requires non-void functions to end with a return
+}
+^
+3 Error(s)

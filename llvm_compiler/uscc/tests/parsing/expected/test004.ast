@@ -1,0 +1,18 @@
+test004.usc:27:12: error: Use of undeclared identifier 'x'
+			return (x);
+			        ^
+test004.usc:28:13: error: Use of undeclared identifier 'z'
+			return ++z;
+			         ^
+test004.usc:29:13: error: Use of undeclared identifier 'y'
+			return --y;
+			         ^
+test004.usc:30:11: error: Use of undeclared identifier 'array'
+			return array[2];
+			       ^
+test004.usc:31:10: error: Return type is non-void and expected expression
+			return;
+			      ^
+test004.usc:34:1: error: USC requires non-void functions to end with a return
+}
+^

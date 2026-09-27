@@ -1,0 +1,19 @@
+semant14e.usc:8:10: error: Declarations are only allowed at the beginning of a scope block
+    for (int i = 0; i < 300; i = i + 1) {
+         ^
+semant14e.usc:8:21: error: Use of undeclared identifier 'i'
+    for (int i = 0; i < 300; i = i + 1) {
+                    ^
+semant14e.usc:8:30: error: Use of undeclared identifier 'i'
+    for (int i = 0; i < 300; i = i + 1) {
+                             ^
+semant14e.usc:8:34: error: Use of undeclared identifier 'i'
+    for (int i = 0; i < 300; i = i + 1) {
+                                 ^
+semant14e.usc:9:13: error: Use of undeclared identifier 'i'
+        if (i > 40) {
+            ^
+semant14e.usc:17:1: error: USC requires non-void functions to end with a return
+}
+^
+6 Error(s)

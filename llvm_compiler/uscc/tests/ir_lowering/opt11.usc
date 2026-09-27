@@ -1,0 +1,19 @@
+// testing for statement parsing
+// opt11.usc
+// while + break
+
+int main(){
+  int i = 0;
+  int b;
+  b = 0;
+  while (i < 20) {
+      b = 100 + b;
+      printf("%d\n", b);
+      ++i;
+      if (i == 15) {
+	  printf("break\n");
+          break;
+      }
+  }
+  return 0;
+}

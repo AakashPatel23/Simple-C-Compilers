@@ -1,0 +1,32 @@
+// emit10.usc
+// Tests address-of-array
+// Expected output:
+// thequickbrownfoxjumpsoverthelazydog
+// brownfoxjumpsoverthelazydog
+//---------------------------------------------------------
+// Copyright (c) 2014, Sanjay Madhav
+// All rights reserved.
+//
+// This file is distributed under the BSD license.
+// See LICENSE.TXT for details.
+//---------------------------------------------------------
+
+int main() {
+    int factor = 10;
+    int i = 0;
+    int result;
+    while (i < 3) {
+        if (i < 2) {
+            result = (factor * 2) + i;
+        } else {
+            result = (factor * 2) - i;
+        }
+        i = i + 1;
+    }
+    if (factor == 10){
+    	i = 10;
+    }
+    printf("%d\n", result);
+    return 0;
+}
+

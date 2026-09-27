@@ -1,0 +1,15 @@
+// testing for statement parsing
+// opt14.usc
+// do-while
+
+int main(){
+  int i = 0;
+  int b;
+  b = 0;
+  do {
+      ++i;
+      b = 100 + b;
+      printf("%d\n", b);
+  } while (i < 20);
+  return 0;
+}

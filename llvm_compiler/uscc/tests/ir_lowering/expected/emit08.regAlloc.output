@@ -1,0 +1,6 @@
+********** USCC REGISTER ALLOCATION **********
+********** Function: main
+NUM_COLORS=2
+Found neighbors=0 for %vreg9 [16r,48B:0)[48B,160r:2)[160r,208B:1)[208B,344r:2)  0@16r 1@160r 2@48B-phi
+Removal: %vreg9 [16r,48B:0)[48B,160r:2)[160r,208B:1)[208B,344r:2)  0@16r 1@160r 2@48B-phi
+Assigning to physical register: %vreg9 [16r,48B:0)[48B,160r:2)[160r,208B:1)[208B,344r:2)  0@16r 1@160r 2@48B-phi

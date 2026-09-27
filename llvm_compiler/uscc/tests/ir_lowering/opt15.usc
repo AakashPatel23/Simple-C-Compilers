@@ -1,0 +1,25 @@
+// testing for statement parsing
+// opt15.usc
+// do-while + break + continue
+
+int main(){
+  int i = 0;
+  int b;
+  b = 0;
+  do {
+      if (i == 15) {
+	  printf("break\n");
+          break;
+      }
+      ++i;
+      if (i == 5) {
+          b = 100 + b;
+          printf("%d\n", b);
+      }
+      else {
+	  printf("continue\n");
+          continue;
+      }
+  } while (i < 25);
+  return 0;
+}

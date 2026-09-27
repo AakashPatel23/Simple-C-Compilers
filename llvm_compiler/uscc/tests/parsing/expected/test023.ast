@@ -1,0 +1,36 @@
+Program:
+---Function: int main
+------CompoundStmt:
+---------Decl: int i
+---------Decl: int b
+---------AssignStmt: b
+------------ConstantExpr: 0
+---------DoWhileStmt
+------------BinaryCmp <:
+---------------IdentExpr: i
+---------------ConstantExpr: 10
+------------CompoundStmt:
+---------------ForStmt
+------------------initStmt
+---------------------AssignStmt: i
+------------------------ConstantExpr: 0
+------------------condExpr
+---------------------ExprStmt
+------------------------BinaryCmp <:
+---------------------------IdentExpr: i
+---------------------------ConstantExpr: 10
+------------------stepStmt
+---------------------ExprStmt
+------------------------IncExpr: i
+------------------bodyStmt
+---------------------CompoundStmt:
+------------------------AssignStmt: b
+---------------------------BinaryMath *:
+------------------------------IdentExpr: i
+------------------------------ConstantExpr: 40
+------------------------AssignStmt: b
+---------------------------BinaryMath +:
+------------------------------IdentExpr: b
+------------------------------ConstantExpr: 200
+---------ReturnStmt:
+------------IdentExpr: b

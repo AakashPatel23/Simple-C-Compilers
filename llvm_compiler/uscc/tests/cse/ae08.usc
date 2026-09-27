@@ -1,0 +1,25 @@
+// ae08.usc
+
+int main() {
+    int a;
+    int b;
+    int x;
+    int i;
+
+    a = 1;
+    b = 2;
+    i = 0;
+
+    while (i < 10) {
+        x = a + b;
+        if (i == 5) {
+            a = 100;
+            break;
+        }
+        b = b + 1;
+        i = i + 1;
+    }
+    x = a + b;
+    printf("x=%d\n", x);
+    return 0;
+}

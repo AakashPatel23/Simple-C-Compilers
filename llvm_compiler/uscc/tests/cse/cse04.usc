@@ -1,0 +1,27 @@
+// cse04.usc
+// Loop invariant expression CSE.
+
+int main() {
+    int a;
+    int b;
+    int i;
+    int sum;
+    int temp1; // Compute outside
+    int temp2; // Compute inside
+
+    a = 7;
+    b = 3;
+    sum = 0;
+    i = 0;
+
+    temp1 = a * b; // Compute a * b outside
+
+    while (i < 10) {
+        temp2 = a * b; // CSE should reuse temp1
+        sum = sum + temp2;
+        i = i + 1;
+    }
+
+    printf("sum=%d\n", sum); // Expected: sum=210
+    return 0;
+}

@@ -1,0 +1,26 @@
+// opt19.usc
+// switch-case-3
+
+int main(){
+    int command = 1;
+    int value = 50;
+    switch (command) {
+        case 1:
+            printf("Processing command 1.\n");
+            if (value > 40) {
+                printf("Value is high.\n");
+            } else {
+                printf("Value is low.\n");
+		break;
+            }
+	    printf("before break\n");
+            break;
+        case 2:
+            printf("Processing command 2.\n");
+            break;
+        default:
+            printf("Unknown command.\n");
+            break;
+    }
+    return 0;
+}

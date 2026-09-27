@@ -1,0 +1,28 @@
+********** Available Expressions Information **********
+********** Function: main, analysis iterates 5 times
+entry:
+  GEN:
+  KILL:
+  IN:
+  OUT:
+switch.end:
+  GEN: [0:   %mul = mul i32 %Phi, %Phi2]
+  KILL:
+  IN:
+  OUT: [0:   %mul = mul i32 %Phi, %Phi2]
+switch.case:
+  GEN:
+  KILL:
+  IN:
+  OUT:
+switch.case1:
+  GEN:
+  KILL:
+  IN:
+  OUT:
+switch.default:
+  GEN:
+  KILL:
+  IN:
+  OUT:
+

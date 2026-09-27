@@ -1,0 +1,45 @@
+test014.usc:23:10: error: Use of undeclared identifier 'funcCallNoArgs'
+	int x = funcCallNoArgs();
+	        ^
+test014.usc:23:8: error: Cannot assign an expression of type void to int
+	int x = funcCallNoArgs();
+	      ^
+test014.usc:24:10: error: Use of undeclared identifier 'funcCallArg'
+	int y = funcCallArg(z);
+	        ^
+test014.usc:24:22: error: Use of undeclared identifier 'z'
+	int y = funcCallArg(z);
+	                    ^
+test014.usc:24:8: error: Cannot assign an expression of type void to int
+	int y = funcCallArg(z);
+	      ^
+test014.usc:25:10: error: Use of undeclared identifier 'funcCallWithArgs'
+	int z = funcCallWithArgs(z + y, funcCallNoArgs());
+	        ^
+test014.usc:25:34: error: Use of undeclared identifier 'funcCallNoArgs'
+	int z = funcCallWithArgs(z + y, funcCallNoArgs());
+	                                ^
+test014.usc:25:8: error: Cannot assign an expression of type void to int
+	int z = funcCallWithArgs(z + y, funcCallNoArgs());
+	      ^
+test014.usc:27:2: error: Use of undeclared identifier 'testNakedFunc'
+	testNakedFunc();
+	^
+test014.usc:29:6: error: Use of undeclared identifier 'testFunc'
+	if (testFunc())
+	    ^
+test014.usc:32:11: error: Use of undeclared identifier 'testFunc2'
+	else if (testFunc2(stuff))
+	         ^
+test014.usc:32:21: error: Use of undeclared identifier 'stuff'
+	else if (testFunc2(stuff))
+	                   ^
+test014.usc:39:10: error: Use of undeclared identifier 'testFunc3'
+	return (testFunc3(--x, y, z, w));
+	        ^
+test014.usc:39:31: error: Use of undeclared identifier 'w'
+	return (testFunc3(--x, y, z, w));
+	                             ^
+test014.usc:39:9: error: Expected type int in return statement
+	return (testFunc3(--x, y, z, w));
+	       ^

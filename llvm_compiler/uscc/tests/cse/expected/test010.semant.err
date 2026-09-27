@@ -1,0 +1,10 @@
+test010.usc:25:9: error: Use of undeclared identifier 'x'
+	while (x > 0)
+	       ^
+test010.usc:27:13: error: Use of undeclared identifier 'x'
+        if (x < 5) {
+            ^
+test010.usc:34:1: error: USC requires non-void functions to end with a return
+}
+^
+3 Error(s)

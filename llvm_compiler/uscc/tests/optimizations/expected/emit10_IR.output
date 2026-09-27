@@ -1,0 +1,47 @@
+; ModuleID = 'main'
+
+@.str = private unnamed_addr constant [4 x i8] c"%d\0A\00"
+
+declare i32 @printf(i8*, ...)
+
+define i32 @main() {
+entry:
+  br label %while.cond
+
+while.cond:                                       ; preds = %if.end, %entry
+  %Phi = phi i32 [ %add6, %if.end ], [ 0, %entry ]
+  %Phi11 = phi i32 [ %Phi12, %if.end ], [ undef, %entry ]
+  %lt = icmp slt i32 %Phi, 3
+  %zext = zext i1 %lt to i32
+  %0 = icmp ne i32 %zext, 0
+  br i1 %0, label %while.body, label %while.end
+
+while.body:                                       ; preds = %while.cond
+  %lt1 = icmp slt i32 %Phi, 2
+  %zext2 = zext i1 %lt1 to i32
+  %1 = icmp ne i32 %zext2, 0
+  br i1 %1, label %if.then, label %if.else
+
+while.end:                                        ; preds = %while.cond
+  br label %if.then8
+
+if.then:                                          ; preds = %while.body
+  %add = add i32 20, %Phi
+  br label %if.end
+
+if.else:                                          ; preds = %while.body
+  %sub = sub i32 20, %Phi
+  br label %if.end
+
+if.end:                                           ; preds = %if.else, %if.then
+  %Phi12 = phi i32 [ %sub, %if.else ], [ %add, %if.then ]
+  %add6 = add i32 %Phi, 1
+  br label %while.cond
+
+if.then8:                                         ; preds = %while.end
+  br label %if.end9
+
+if.end9:                                          ; preds = %if.then8
+  %2 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([4 x i8]* @.str, i32 0, i32 0), i32 %Phi11)
+  ret i32 0
+}

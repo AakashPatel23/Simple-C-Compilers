@@ -1,0 +1,9 @@
+semant06e.usc:18:6: error: Invalid redeclaration of identifier 'abc'
+	int abc = 5;
+	    ^
+semant06e.usc:20:13: warn: warning: declaration of 'abc' shadows a previous declaration
+        int abc = 10;
+            ^
+semant06e.usc:28:9: warn: warning: index 31 is outside bounds of array 'a' of size 30
+    a[31] = 333;
+        ^

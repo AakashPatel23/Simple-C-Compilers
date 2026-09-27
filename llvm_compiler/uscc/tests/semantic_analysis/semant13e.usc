@@ -1,0 +1,10 @@
+// semant13e.usc
+
+int main()
+{
+	int x = 5;
+	printf("%d\n", x);
+    break;
+    x += 3;
+    continue;
+}

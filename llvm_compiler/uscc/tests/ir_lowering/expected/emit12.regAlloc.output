@@ -1,0 +1,51 @@
+********** USCC REGISTER ALLOCATION **********
+********** Function: main
+NUM_COLORS=2
+Found neighbors=1 for %vreg11 [448r,464r:2)[464r,496r:0)[496r,528r:1)[528r,544r:3)  0@464r 1@496r 2@448r 3@528r
+Removal: %vreg11 [448r,464r:2)[464r,496r:0)[496r,528r:1)[528r,544r:3)  0@464r 1@496r 2@448r 3@528r
+Found neighbors=1 for %vreg32 [1696r,1712r:0)  0@1696r
+Removal: %vreg32 [1696r,1712r:0)  0@1696r
+Found neighbors=1 for %vreg81 [2368r,2384r:0)  0@2368r
+Removal: %vreg81 [2368r,2384r:0)  0@2368r
+Spill candidate (neighbors=2, weight=0.0335352): %vreg26 [1552r,1568r:0)[1568r,1664r:1)  0@1552r 1@1568r
+Removal: %vreg26 [1552r,1568r:0)[1568r,1664r:1)  0@1552r 1@1568r
+Found neighbors=1 for %vreg31 [1536r,1616r:2)[1616r,1664r:0)[1664r,1696r:1)  0@1616r 1@1664r 2@1536r
+Removal: %vreg31 [1536r,1616r:2)[1616r,1664r:0)[1664r,1696r:1)  0@1616r 1@1664r 2@1536r
+Spill candidate (neighbors=4, weight=0.0419207): %vreg14 [1120r,1360B:0)[1520B,1536r:0)  0@1120r
+Removal: %vreg14 [1120r,1360B:0)[1520B,1536r:0)  0@1120r
+Found neighbors=1 for %vreg22 [1296r,1312r:0)  0@1296r
+Removal: %vreg22 [1296r,1312r:0)  0@1296r
+Spill candidate (neighbors=4, weight=0.0726563): %vreg57 [784r,1024B:0)[2048B,2208r:0)  0@784r
+Removal: %vreg57 [784r,1024B:0)[2048B,2208r:0)  0@784r
+Found neighbors=1 for %vreg65 [960r,976r:0)  0@960r
+Removal: %vreg65 [960r,976r:0)  0@960r
+Spill candidate (neighbors=2, weight=0.0917285): %vreg16 [1152r,1168r:0)[1168r,1264r:1)  0@1152r 1@1168r
+Removal: %vreg16 [1152r,1168r:0)[1168r,1264r:1)  0@1152r 1@1168r
+Found neighbors=1 for %vreg21 [1136r,1216r:2)[1216r,1264r:0)[1264r,1296r:1)  0@1216r 1@1264r 2@1136r
+Removal: %vreg21 [1136r,1216r:2)[1216r,1264r:0)[1264r,1296r:1)  0@1216r 1@1264r 2@1136r
+Spill candidate (neighbors=4, weight=0.113435): %vreg0 [16r,256B:1)[256B,592B:0)[656B,1056r:0)[1056r,1104B:2)[1104B,2608B:0)  0@256B-phi 1@16r 2@1056r
+Removal: %vreg0 [16r,256B:1)[256B,592B:0)[656B,1056r:0)[1056r,1104B:2)[1104B,2608B:0)  0@256B-phi 1@16r 2@1056r
+Found neighbors=1 for %vreg59 [816r,832r:0)[832r,928r:1)  0@816r 1@832r
+Removal: %vreg59 [816r,832r:0)[832r,928r:1)  0@816r 1@832r
+Found neighbors=0 for %vreg64 [800r,880r:2)[880r,928r:0)[928r,960r:1)  0@880r 1@928r 2@800r
+Removal: %vreg64 [800r,880r:2)[880r,928r:0)[928r,960r:1)  0@880r 1@928r 2@800r
+Found neighbors=1 for %vreg75 [2224r,2240r:0)[2240r,2336r:1)  0@2224r 1@2240r
+Removal: %vreg75 [2224r,2240r:0)[2240r,2336r:1)  0@2224r 1@2240r
+Found neighbors=0 for %vreg80 [2208r,2288r:2)[2288r,2336r:0)[2336r,2368r:1)  0@2288r 1@2336r 2@2208r
+Removal: %vreg80 [2208r,2288r:2)[2288r,2336r:0)[2336r,2368r:1)  0@2288r 1@2336r 2@2208r
+Assigning to physical register: %vreg80 [2208r,2288r:2)[2288r,2336r:0)[2336r,2368r:1)  0@2288r 1@2336r 2@2208r
+Assigning to physical register: %vreg75 [2224r,2240r:0)[2240r,2336r:1)  0@2224r 1@2240r
+Assigning to physical register: %vreg64 [800r,880r:2)[880r,928r:0)[928r,960r:1)  0@880r 1@928r 2@800r
+Assigning to physical register: %vreg59 [816r,832r:0)[832r,928r:1)  0@816r 1@832r
+Assigning to physical register: %vreg0 [16r,256B:1)[256B,592B:0)[656B,1056r:0)[1056r,1104B:2)[1104B,2608B:0)  0@256B-phi 1@16r 2@1056r
+Assigning to physical register: %vreg21 [1136r,1216r:2)[1216r,1264r:0)[1264r,1296r:1)  0@1216r 1@1264r 2@1136r
+Assigning to physical register: %vreg16 [1152r,1168r:0)[1168r,1264r:1)  0@1152r 1@1168r
+Assigning to physical register: %vreg65 [960r,976r:0)  0@960r
+Assigning to physical register: %vreg57 [784r,1024B:0)[2048B,2208r:0)  0@784r
+Assigning to physical register: %vreg22 [1296r,1312r:0)  0@1296r
+Assigning to physical register: %vreg14 [1120r,1360B:0)[1520B,1536r:0)  0@1120r
+Assigning to physical register: %vreg31 [1536r,1616r:2)[1616r,1664r:0)[1664r,1696r:1)  0@1616r 1@1664r 2@1536r
+Assigning to physical register: %vreg26 [1552r,1568r:0)[1568r,1664r:1)  0@1552r 1@1568r
+Assigning to physical register: %vreg81 [2368r,2384r:0)  0@2368r
+Assigning to physical register: %vreg32 [1696r,1712r:0)  0@1696r
+Assigning to physical register: %vreg11 [448r,464r:2)[464r,496r:0)[496r,528r:1)[528r,544r:3)  0@464r 1@496r 2@448r 3@528r

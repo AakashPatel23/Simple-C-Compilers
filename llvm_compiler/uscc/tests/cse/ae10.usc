@@ -1,0 +1,28 @@
+// ae10.usc
+
+int main() {
+    int a;
+    int b;
+    int c;
+    int x;
+    int y;
+    int i;
+
+    a = 1; b = 2; c = 3;
+    x = a * c;
+    i = 0;
+
+    while (i < 2) {
+        y = a * c;
+        if (i == 0) {
+            b = a * c;
+        } else {
+            c = 10;
+            y = a * c;
+        }
+        i = i + 1;
+    }
+    x = a * c; 
+    printf("x=%d\n", x);
+    return 0;
+}

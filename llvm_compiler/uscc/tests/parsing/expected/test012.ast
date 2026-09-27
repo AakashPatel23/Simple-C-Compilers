@@ -1,0 +1,48 @@
+Program:
+---Function: int main
+------CompoundStmt:
+---------IfStmt: 
+------------BinaryCmp ==:
+---------------IdentExpr: z
+---------------ConstantExpr: 2
+------------ThenStmt: 
+---------------NullStmt
+---------IfStmt: 
+------------BinaryCmp ==:
+---------------IdentExpr: x
+---------------ConstantExpr: 5
+------------ThenStmt: 
+---------------CompoundStmt:
+------------------WhileStmt
+---------------------ConstantExpr: 1
+---------------------NullStmt
+------------------AssignStmt: y
+---------------------BinaryMath +:
+------------------------ConstantExpr: 7
+------------------------BinaryMath *:
+---------------------------ConstantExpr: 8
+---------------------------ConstantExpr: 2
+------------ElseStmt: 
+---------------IfStmt: 
+------------------BinaryCmp ==:
+---------------------IdentExpr: x
+---------------------ConstantExpr: 4
+------------------ThenStmt: 
+---------------------CompoundStmt:
+------------------------ExprStmt
+---------------------------DecExpr: x
+------------------ElseStmt: 
+---------------------IfStmt: 
+------------------------BinaryCmp ==:
+---------------------------IdentExpr: x
+---------------------------ConstantExpr: 3
+------------------------ThenStmt: 
+---------------------------CompoundStmt:
+------------------------------AssignStmt: y
+---------------------------------BinaryMath *:
+------------------------------------IdentExpr: y
+------------------------------------IdentExpr: y
+------------------------ElseStmt: 
+---------------------------CompoundStmt:
+------------------------------AssignStmt: z
+---------------------------------ConstantExpr: 42

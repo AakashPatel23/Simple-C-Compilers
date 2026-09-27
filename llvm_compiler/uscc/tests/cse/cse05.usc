@@ -1,0 +1,19 @@
+// cse05.usc
+// CSE prevented by intermediate kill.
+
+int main() {
+    int a;
+    int b;
+    int x;
+    int y;
+
+    a = 1;
+    b = 2;
+    x = a + b; // Compute a + b
+    printf("%d\n", x); // Use x
+    a = 5;     // Definition kills availability of previous 'a + b'
+    y = a + b; // Must recompute a + b (using new 'a')
+
+    printf("y=%d\n", y); // Expected: y=7
+    return 0;
+}

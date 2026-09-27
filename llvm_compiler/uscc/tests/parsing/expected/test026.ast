@@ -1,0 +1,66 @@
+Program:
+---Function: int main
+------CompoundStmt:
+---------Decl: int i
+---------Decl: int b
+---------Decl: int a
+---------AssignStmt: b
+------------ConstantExpr: 0
+---------SwitchStmt
+------------IdentExpr: b
+------------CaseStmt
+---------------BinaryCmp ==:
+------------------IdentExpr: b
+------------------ConstantExpr: 0
+---------------AssignStmt: b
+------------------BinaryMath +:
+---------------------IdentExpr: b
+---------------------ConstantExpr: 100
+---------------AssignStmt: i
+------------------ConstantExpr: 0
+---------------AssignStmt: a
+------------------BinaryMath +:
+---------------------IdentExpr: b
+---------------------ConstantExpr: 3000
+---------------BreakStmt
+------------CaseStmt
+---------------BinaryCmp ==:
+------------------IdentExpr: b
+------------------ConstantExpr: 10
+---------------AssignStmt: b
+------------------BinaryMath +:
+---------------------IdentExpr: b
+---------------------ConstantExpr: 5000
+---------------AssignStmt: i
+------------------ConstantExpr: 3333
+---------------AssignStmt: i
+------------------BinaryMath +:
+---------------------IdentExpr: b
+---------------------ConstantExpr: 5000
+---------------BreakStmt
+------------CaseStmt
+---------------BinaryCmp ==:
+------------------IdentExpr: b
+------------------ConstantExpr: 30
+---------------AssignStmt: b
+------------------BinaryMath +:
+---------------------IdentExpr: b
+---------------------ConstantExpr: 100
+---------------AssignStmt: i
+------------------ConstantExpr: 0
+---------------AssignStmt: i
+------------------BinaryMath +:
+---------------------IdentExpr: b
+---------------------ConstantExpr: 4000
+---------------BreakStmt
+------------DefaultStmt
+---------------AssignStmt: b
+------------------BinaryMath -:
+---------------------IdentExpr: b
+---------------------ConstantExpr: 100
+---------------AssignStmt: a
+------------------BinaryMath +:
+---------------------IdentExpr: b
+---------------------ConstantExpr: 5000
+---------ReturnStmt:
+------------ConstantExpr: 0

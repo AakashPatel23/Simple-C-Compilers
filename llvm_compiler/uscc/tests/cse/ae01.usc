@@ -1,0 +1,17 @@
+// ae01.usc
+
+int main() {
+    int a;
+    int b;
+    int x;
+    int y;
+
+    a = 1;
+    b = 2;
+    x = a + b;
+    a = 5;
+    y = a + b;
+
+    printf("x=%d, y=%d\n", x, y);
+    return 0;
+}

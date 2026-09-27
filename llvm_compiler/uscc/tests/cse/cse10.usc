@@ -1,0 +1,33 @@
+// cse10.usc
+// Complex CFG using switch inside loop.
+
+int main() {
+    int a;
+    int b;
+    int c;
+    int x;
+    int y;
+    int i;
+
+    a = 10;
+    b = 2;
+    c = 0;
+    i = 0;
+
+    while (i < 5) {
+        x = a - b; // Compute e1: a - b (invariant w.r.t this loop)
+        if (i % 2 == 0) {
+            y = a - b; // Reuse e1
+            c = c + y;
+        } else {
+            y = a - b; // Reuse e1
+            c = c - y;
+        }
+        i = i + 1;
+        // 'a' and 'b' are not changed in the loop
+    }
+
+    printf("c=%d\n", c); // Expected: c=8 (8 + 8 - 8 + 8 - 8)
+    return 0;
+}
+

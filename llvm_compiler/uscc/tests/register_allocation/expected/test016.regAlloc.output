@@ -1,0 +1,32 @@
+********** USCC REGISTER ALLOCATION **********
+********** Function: printArray
+NUM_COLORS=2
+Found neighbors=1 for %vreg7 [464r,480r:0)  0@464r
+Removal: %vreg7 [464r,480r:0)  0@464r
+Found neighbors=0 for %vreg8 [480r,616r:0)  0@480r
+Removal: %vreg8 [480r,616r:0)  0@480r
+Spill candidate (neighbors=4) pushed optimistically: %vreg2 [32r,480r:0)  0@32r
+Note: This node would have been spilled in Chaitin, but is pushed to stack optimistically.
+Removal: %vreg2 [32r,480r:0)  0@32r
+Spill candidate (neighbors=3) pushed optimistically: %vreg5 [16r,80r:0)[80r,448B:1)  0@16r 1@80r
+Note: This node would have been spilled in Chaitin, but is pushed to stack optimistically.
+Removal: %vreg5 [16r,80r:0)[80r,448B:1)  0@16r 1@80r
+Found neighbors=1 for %vreg14 [240r,256r:0)  0@240r
+Removal: %vreg14 [240r,256r:0)  0@240r
+Found neighbors=1 for %vreg15 [256r,344r:0)  0@256r
+Removal: %vreg15 [256r,344r:0)  0@256r
+Found neighbors=0 for %vreg21 [128r,144B:0)[144B,400r:2)[400r,448B:1)[448B,464r:2)  0@128r 1@400r 2@144B-phi
+Removal: %vreg21 [128r,144B:0)[144B,400r:2)[400r,448B:1)[448B,464r:2)  0@128r 1@400r 2@144B-phi
+Assigning to physical register EBX: %vreg21 [128r,144B:0)[144B,400r:2)[400r,448B:1)[448B,464r:2)  0@128r 1@400r 2@144B-phi
+Assigning to physical register ESI: %vreg15 [256r,344r:0)  0@256r
+Assigning to physical register RAX: %vreg14 [240r,256r:0)  0@240r
+Assigning to physical register EBP: %vreg5 [16r,80r:0)[80r,448B:1)  0@16r 1@80r
+Assigning to physical register R14: %vreg2 [32r,480r:0)  0@32r
+Assigning to physical register ESI: %vreg8 [480r,616r:0)  0@480r
+Assigning to physical register RAX: %vreg7 [464r,480r:0)  0@464r
+********** USCC REGISTER ALLOCATION **********
+********** Function: main
+NUM_COLORS=2
+Found neighbors=0 for %vreg0 [112r,168r:0)  0@112r
+Removal: %vreg0 [112r,168r:0)  0@112r
+Assigning to physical register RDI: %vreg0 [112r,168r:0)  0@112r

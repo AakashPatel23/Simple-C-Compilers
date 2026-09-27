@@ -1,0 +1,44 @@
+; ModuleID = 'main'
+
+@.str = private unnamed_addr constant [6 x i8] c"y=%d\0A\00"
+
+declare i32 @printf(i8*, ...)
+
+define i32 @main() {
+entry:
+  br label %while.cond
+
+while.cond:                                       ; preds = %while.end7, %entry
+  %Phi = phi i32 [ %add14, %while.end7 ], [ 1, %entry ]
+  %Phi13 = phi i32 [ %Phi8, %while.end7 ], [ 0, %entry ]
+  %lt = icmp slt i32 %Phi, 4
+  %zext = zext i1 %lt to i32
+  %0 = icmp ne i32 %zext, 0
+  br i1 %0, label %while.body, label %while.end
+
+while.body:                                       ; preds = %while.cond
+  %sdiv = sdiv i32 100, %Phi
+  br label %while.cond2
+
+while.end:                                        ; preds = %while.cond
+  %1 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([6 x i8]* @.str, i32 0, i32 0), i32 %Phi13)
+  ret i32 0
+
+while.cond2:                                      ; preds = %while.body6, %while.body
+  %Phi3 = phi i32 [ %add12, %while.body6 ], [ 0, %while.body ]
+  %Phi8 = phi i32 [ %add, %while.body6 ], [ %Phi13, %while.body ]
+  %lt4 = icmp slt i32 %Phi3, 3
+  %zext5 = zext i1 %lt4 to i32
+  %2 = icmp ne i32 %zext5, 0
+  br i1 %2, label %while.body6, label %while.end7
+
+while.body6:                                      ; preds = %while.cond2
+  %sdiv11 = sdiv i32 100, %Phi
+  %add = add i32 %Phi8, %sdiv11
+  %add12 = add i32 %Phi3, 1
+  br label %while.cond2
+
+while.end7:                                       ; preds = %while.cond2
+  %add14 = add i32 %Phi, 1
+  br label %while.cond
+}

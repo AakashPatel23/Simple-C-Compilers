@@ -1,0 +1,32 @@
+// semant04e.usc
+// Tests undefined identifier
+// in an assign statement.
+// Expected: Error on line 10 for "z"
+//---------------------------------------------------------
+// Copyright (c) 2014, Sanjay Madhav
+// All rights reserved.
+//
+// This file is distributed under the BSD license.
+// See LICENSE.TXT for details.
+//---------------------------------------------------------
+// Extended for semantic warning
+
+int compute(int b) {
+    int c = 4;
+    {
+        int b = 5;
+    }
+    return c + 5;
+}
+
+int main()
+{
+	int x = 5;
+	int y = 7;
+    int d = 333;
+	z = x + y;
+    {
+        int d = 44;
+        int c = compute(d);
+    }
+}

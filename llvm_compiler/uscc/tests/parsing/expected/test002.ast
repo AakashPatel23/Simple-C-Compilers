@@ -1,0 +1,6 @@
+test002.usc:21:10: error: Return type is non-void and expected expression
+			return;
+			      ^
+test002.usc:24:1: error: USC requires non-void functions to end with a return
+}
+^

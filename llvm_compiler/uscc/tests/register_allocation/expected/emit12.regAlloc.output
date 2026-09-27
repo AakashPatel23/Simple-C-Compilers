@@ -1,0 +1,56 @@
+********** USCC REGISTER ALLOCATION **********
+********** Function: main
+NUM_COLORS=2
+Found neighbors=1 for %vreg11 [448r,464r:2)[464r,496r:0)[496r,528r:1)[528r,544r:3)  0@464r 1@496r 2@448r 3@528r
+Removal: %vreg11 [448r,464r:2)[464r,496r:0)[496r,528r:1)[528r,544r:3)  0@464r 1@496r 2@448r 3@528r
+Found neighbors=1 for %vreg32 [2256r,2272r:0)  0@2256r
+Removal: %vreg32 [2256r,2272r:0)  0@2256r
+Found neighbors=1 for %vreg81 [1680r,1696r:0)  0@1680r
+Removal: %vreg81 [1680r,1696r:0)  0@1680r
+Spill candidate (neighbors=2) pushed optimistically: %vreg26 [2112r,2128r:0)[2128r,2224r:1)  0@2112r 1@2128r
+Note: This node would have been spilled in Chaitin, but is pushed to stack optimistically.
+Removal: %vreg26 [2112r,2128r:0)[2128r,2224r:1)  0@2112r 1@2128r
+Found neighbors=1 for %vreg31 [2096r,2176r:2)[2176r,2224r:0)[2224r,2256r:1)  0@2176r 1@2224r 2@2096r
+Removal: %vreg31 [2096r,2176r:2)[2176r,2224r:0)[2224r,2256r:1)  0@2176r 1@2224r 2@2096r
+Spill candidate (neighbors=4) pushed optimistically: %vreg14 [1040r,1280B:0)[2080B,2096r:0)  0@1040r
+Note: This node would have been spilled in Chaitin, but is pushed to stack optimistically.
+Removal: %vreg14 [1040r,1280B:0)[2080B,2096r:0)  0@1040r
+Found neighbors=1 for %vreg22 [1216r,1232r:0)  0@1216r
+Removal: %vreg22 [1216r,1232r:0)  0@1216r
+Spill candidate (neighbors=4) pushed optimistically: %vreg57 [784r,1024B:0)[1360B,1520r:0)  0@784r
+Note: This node would have been spilled in Chaitin, but is pushed to stack optimistically.
+Removal: %vreg57 [784r,1024B:0)[1360B,1520r:0)  0@784r
+Found neighbors=1 for %vreg65 [960r,976r:0)  0@960r
+Removal: %vreg65 [960r,976r:0)  0@960r
+Spill candidate (neighbors=2) pushed optimistically: %vreg16 [1072r,1088r:0)[1088r,1184r:1)  0@1072r 1@1088r
+Note: This node would have been spilled in Chaitin, but is pushed to stack optimistically.
+Removal: %vreg16 [1072r,1088r:0)[1088r,1184r:1)  0@1072r 1@1088r
+Found neighbors=1 for %vreg21 [1056r,1136r:2)[1136r,1184r:0)[1184r,1216r:1)  0@1136r 1@1184r 2@1056r
+Removal: %vreg21 [1056r,1136r:2)[1136r,1184r:0)[1184r,1216r:1)  0@1136r 1@1184r 2@1056r
+Spill candidate (neighbors=4) pushed optimistically: %vreg0 [16r,256B:1)[256B,592B:0)[656B,1312r:0)[1312r,1360B:2)[1360B,2608B:0)  0@256B-phi 1@16r 2@1312r
+Note: This node would have been spilled in Chaitin, but is pushed to stack optimistically.
+Removal: %vreg0 [16r,256B:1)[256B,592B:0)[656B,1312r:0)[1312r,1360B:2)[1360B,2608B:0)  0@256B-phi 1@16r 2@1312r
+Found neighbors=1 for %vreg59 [816r,832r:0)[832r,928r:1)  0@816r 1@832r
+Removal: %vreg59 [816r,832r:0)[832r,928r:1)  0@816r 1@832r
+Found neighbors=0 for %vreg64 [800r,880r:2)[880r,928r:0)[928r,960r:1)  0@880r 1@928r 2@800r
+Removal: %vreg64 [800r,880r:2)[880r,928r:0)[928r,960r:1)  0@880r 1@928r 2@800r
+Found neighbors=1 for %vreg75 [1536r,1552r:0)[1552r,1648r:1)  0@1536r 1@1552r
+Removal: %vreg75 [1536r,1552r:0)[1552r,1648r:1)  0@1536r 1@1552r
+Found neighbors=0 for %vreg80 [1520r,1600r:2)[1600r,1648r:0)[1648r,1680r:1)  0@1600r 1@1648r 2@1520r
+Removal: %vreg80 [1520r,1600r:2)[1600r,1648r:0)[1648r,1680r:1)  0@1600r 1@1648r 2@1520r
+Assigning to physical register RAX: %vreg80 [1520r,1600r:2)[1600r,1648r:0)[1648r,1680r:1)  0@1600r 1@1648r 2@1520r
+Assigning to physical register RCX: %vreg75 [1536r,1552r:0)[1552r,1648r:1)  0@1536r 1@1552r
+Assigning to physical register RAX: %vreg64 [800r,880r:2)[880r,928r:0)[928r,960r:1)  0@880r 1@928r 2@800r
+Assigning to physical register RCX: %vreg59 [816r,832r:0)[832r,928r:1)  0@816r 1@832r
+Assigning to physical register EBX: %vreg0 [16r,256B:1)[256B,592B:0)[656B,1312r:0)[1312r,1360B:2)[1360B,2608B:0)  0@256B-phi 1@16r 2@1312r
+Assigning to physical register RAX: %vreg21 [1056r,1136r:2)[1136r,1184r:0)[1184r,1216r:1)  0@1136r 1@1184r 2@1056r
+Assigning to physical register RCX: %vreg16 [1072r,1088r:0)[1088r,1184r:1)  0@1072r 1@1088r
+Assigning to physical register EAX: %vreg65 [960r,976r:0)  0@960r
+Assigning to physical register R14: %vreg57 [784r,1024B:0)[1360B,1520r:0)  0@784r
+Assigning to physical register EAX: %vreg22 [1216r,1232r:0)  0@1216r
+Assigning to physical register RDX: %vreg14 [1040r,1280B:0)[2080B,2096r:0)  0@1040r
+Assigning to physical register RAX: %vreg31 [2096r,2176r:2)[2176r,2224r:0)[2224r,2256r:1)  0@2176r 1@2224r 2@2096r
+Assigning to physical register RCX: %vreg26 [2112r,2128r:0)[2128r,2224r:1)  0@2112r 1@2128r
+Assigning to physical register EAX: %vreg81 [1680r,1696r:0)  0@1680r
+Assigning to physical register EAX: %vreg32 [2256r,2272r:0)  0@2256r
+Assigning to physical register EAX: %vreg11 [448r,464r:2)[464r,496r:0)[496r,528r:1)[528r,544r:3)  0@464r 1@496r 2@448r 3@528r

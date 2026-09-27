@@ -1,0 +1,28 @@
+// Test015.usc
+// This is the FIRST well-formed USC program
+// unit test.
+//
+// Tests adding multiple functions,
+// and arguments to functions.
+//---------------------------------------------------------
+// Copyright (c) 2014, Sanjay Madhav
+// All rights reserved.
+//
+// This file is distributed under the BSD license.
+// See LICENSE.TXT for details.
+//---------------------------------------------------------
+
+int main() {
+    int x = 0;
+    if (2 + 2 == 4) {
+        x = 5;
+        while (x < 10) {
+            x = x + 1;
+        }
+    } else {
+        x = 100;
+    }
+    printf("%d\n", x);
+    return 0;
+}
+

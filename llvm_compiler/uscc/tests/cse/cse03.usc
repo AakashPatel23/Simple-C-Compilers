@@ -1,0 +1,30 @@
+// cse03.usc
+// Expression computed independently in branches.
+
+int main() {
+    int a;
+    int b;
+    int c;
+    int x; // Result holder in branches
+    int y; // Result holder in branches
+    int z; // To use the result after merge
+
+    a = 10;
+    b = 5;
+    c = 0;
+    x = 0; // Initialize
+    y = 0; // Initialize
+
+    if (c == 0) {
+        x = a - b; // Compute a - b
+    } else {
+        y = a - b; // Compute a - b again
+        x = y;     // Ensure x holds the result on this path too
+    }
+    // a - b is available here via x (or y if optimized further)
+
+    z = x + (a - b); // CSE should reuse x for (a - b)
+
+    printf("z=%d\n", z); // Expected: z=10
+    return 0;
+}

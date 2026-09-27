@@ -1,0 +1,33 @@
+********** Available Expressions Information **********
+********** Function: main, analysis iterates 10 times
+entry:
+  GEN:
+  KILL:
+  IN:
+  OUT:
+while.cond:
+  GEN: [0:   %lt = icmp slt i32 %Phi, 10] [1:   %0 = icmp ne i32 %zext, 0]
+  KILL: [2:   %add = add i32 1, %Phi2] [3:   %eq = icmp eq i32 %Phi, 5] [5:   %add8 = add i32 %Phi6, %Phi2] [6:   %add4 = add i32 %Phi2, 1] [7:   %add5 = add i32 %Phi, 1]
+  IN:
+  OUT: [0:   %lt = icmp slt i32 %Phi, 10] [1:   %0 = icmp ne i32 %zext, 0]
+while.body:
+  GEN: [2:   %add = add i32 1, %Phi2] [3:   %eq = icmp eq i32 %Phi, 5] [4:   %1 = icmp ne i32 %zext3, 0]
+  KILL:
+  IN: [0:   %lt = icmp slt i32 %Phi, 10] [1:   %0 = icmp ne i32 %zext, 0]
+  OUT: [0:   %lt = icmp slt i32 %Phi, 10] [1:   %0 = icmp ne i32 %zext, 0] [2:   %add = add i32 1, %Phi2] [3:   %eq = icmp eq i32 %Phi, 5] [4:   %1 = icmp ne i32 %zext3, 0]
+while.end:
+  GEN: [5:   %add8 = add i32 %Phi6, %Phi2]
+  KILL:
+  IN: [0:   %lt = icmp slt i32 %Phi, 10] [1:   %0 = icmp ne i32 %zext, 0]
+  OUT: [0:   %lt = icmp slt i32 %Phi, 10] [1:   %0 = icmp ne i32 %zext, 0] [5:   %add8 = add i32 %Phi6, %Phi2]
+if.then:
+  GEN:
+  KILL:
+  IN: [0:   %lt = icmp slt i32 %Phi, 10] [1:   %0 = icmp ne i32 %zext, 0] [2:   %add = add i32 1, %Phi2] [3:   %eq = icmp eq i32 %Phi, 5] [4:   %1 = icmp ne i32 %zext3, 0]
+  OUT: [0:   %lt = icmp slt i32 %Phi, 10] [1:   %0 = icmp ne i32 %zext, 0] [2:   %add = add i32 1, %Phi2] [3:   %eq = icmp eq i32 %Phi, 5] [4:   %1 = icmp ne i32 %zext3, 0]
+if.end:
+  GEN: [6:   %add4 = add i32 %Phi2, 1] [7:   %add5 = add i32 %Phi, 1]
+  KILL:
+  IN: [0:   %lt = icmp slt i32 %Phi, 10] [1:   %0 = icmp ne i32 %zext, 0] [2:   %add = add i32 1, %Phi2] [3:   %eq = icmp eq i32 %Phi, 5] [4:   %1 = icmp ne i32 %zext3, 0]
+  OUT: [0:   %lt = icmp slt i32 %Phi, 10] [1:   %0 = icmp ne i32 %zext, 0] [2:   %add = add i32 1, %Phi2] [3:   %eq = icmp eq i32 %Phi, 5] [4:   %1 = icmp ne i32 %zext3, 0] [6:   %add4 = add i32 %Phi2, 1] [7:   %add5 = add i32 %Phi, 1]
+

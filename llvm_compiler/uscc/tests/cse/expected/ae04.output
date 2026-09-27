@@ -1,0 +1,58 @@
+********** Available Expressions Information **********
+********** Function: main, analysis iterates 20 times
+entry:
+  GEN:
+  KILL:
+  IN:
+  OUT:
+while.cond:
+  GEN: [0:   %lt = icmp slt i32 %Phi, 2] [1:   %0 = icmp ne i32 %zext, 0]
+  KILL: [2:   %sub26 = sub i32 %Phi24, 3] [6:   %eq = icmp eq i32 %Phi, 1] [8:   %add25 = add i32 %Phi, 1]
+  IN:
+  OUT: [0:   %lt = icmp slt i32 %Phi, 2] [1:   %0 = icmp ne i32 %zext, 0]
+while.body:
+  GEN:
+  KILL:
+  IN: [0:   %lt = icmp slt i32 %Phi, 2] [1:   %0 = icmp ne i32 %zext, 0]
+  OUT: [0:   %lt = icmp slt i32 %Phi, 2] [1:   %0 = icmp ne i32 %zext, 0]
+while.end:
+  GEN: [2:   %sub26 = sub i32 %Phi24, 3]
+  KILL:
+  IN: [0:   %lt = icmp slt i32 %Phi, 2] [1:   %0 = icmp ne i32 %zext, 0]
+  OUT: [0:   %lt = icmp slt i32 %Phi, 2] [1:   %0 = icmp ne i32 %zext, 0] [2:   %sub26 = sub i32 %Phi24, 3]
+while.cond1:
+  GEN: [3:   %lt3 = icmp slt i32 %Phi2, 2] [4:   %2 = icmp ne i32 %zext4, 0]
+  KILL: [5:   %sub = sub i32 %Phi7, 3] [9:   %eq13 = icmp eq i32 %Phi2, 0] [11:   %add = add i32 %Phi2, 1]
+  IN:
+  OUT: [3:   %lt3 = icmp slt i32 %Phi2, 2] [4:   %2 = icmp ne i32 %zext4, 0]
+while.body5:
+  GEN: [5:   %sub = sub i32 %Phi7, 3] [6:   %eq = icmp eq i32 %Phi, 1] [7:   %3 = icmp ne i32 %zext10, 0]
+  KILL:
+  IN: [3:   %lt3 = icmp slt i32 %Phi2, 2] [4:   %2 = icmp ne i32 %zext4, 0]
+  OUT: [3:   %lt3 = icmp slt i32 %Phi2, 2] [4:   %2 = icmp ne i32 %zext4, 0] [5:   %sub = sub i32 %Phi7, 3] [6:   %eq = icmp eq i32 %Phi, 1] [7:   %3 = icmp ne i32 %zext10, 0]
+while.end6:
+  GEN: [8:   %add25 = add i32 %Phi, 1]
+  KILL:
+  IN: [3:   %lt3 = icmp slt i32 %Phi2, 2] [4:   %2 = icmp ne i32 %zext4, 0]
+  OUT: [3:   %lt3 = icmp slt i32 %Phi2, 2] [4:   %2 = icmp ne i32 %zext4, 0] [8:   %add25 = add i32 %Phi, 1]
+if.then:
+  GEN: [9:   %eq13 = icmp eq i32 %Phi2, 0] [10:   %4 = icmp ne i32 %zext14, 0]
+  KILL:
+  IN: [3:   %lt3 = icmp slt i32 %Phi2, 2] [4:   %2 = icmp ne i32 %zext4, 0] [5:   %sub = sub i32 %Phi7, 3] [6:   %eq = icmp eq i32 %Phi, 1] [7:   %3 = icmp ne i32 %zext10, 0]
+  OUT: [3:   %lt3 = icmp slt i32 %Phi2, 2] [4:   %2 = icmp ne i32 %zext4, 0] [5:   %sub = sub i32 %Phi7, 3] [6:   %eq = icmp eq i32 %Phi, 1] [7:   %3 = icmp ne i32 %zext10, 0] [9:   %eq13 = icmp eq i32 %Phi2, 0] [10:   %4 = icmp ne i32 %zext14, 0]
+if.end:
+  GEN: [11:   %add = add i32 %Phi2, 1]
+  KILL:
+  IN: [3:   %lt3 = icmp slt i32 %Phi2, 2] [4:   %2 = icmp ne i32 %zext4, 0] [5:   %sub = sub i32 %Phi7, 3] [6:   %eq = icmp eq i32 %Phi, 1] [7:   %3 = icmp ne i32 %zext10, 0]
+  OUT: [3:   %lt3 = icmp slt i32 %Phi2, 2] [4:   %2 = icmp ne i32 %zext4, 0] [5:   %sub = sub i32 %Phi7, 3] [6:   %eq = icmp eq i32 %Phi, 1] [7:   %3 = icmp ne i32 %zext10, 0] [11:   %add = add i32 %Phi2, 1]
+if.then11:
+  GEN:
+  KILL:
+  IN: [3:   %lt3 = icmp slt i32 %Phi2, 2] [4:   %2 = icmp ne i32 %zext4, 0] [5:   %sub = sub i32 %Phi7, 3] [6:   %eq = icmp eq i32 %Phi, 1] [7:   %3 = icmp ne i32 %zext10, 0] [9:   %eq13 = icmp eq i32 %Phi2, 0] [10:   %4 = icmp ne i32 %zext14, 0]
+  OUT: [3:   %lt3 = icmp slt i32 %Phi2, 2] [4:   %2 = icmp ne i32 %zext4, 0] [5:   %sub = sub i32 %Phi7, 3] [6:   %eq = icmp eq i32 %Phi, 1] [7:   %3 = icmp ne i32 %zext10, 0] [9:   %eq13 = icmp eq i32 %Phi2, 0] [10:   %4 = icmp ne i32 %zext14, 0]
+if.end12:
+  GEN:
+  KILL:
+  IN: [3:   %lt3 = icmp slt i32 %Phi2, 2] [4:   %2 = icmp ne i32 %zext4, 0] [5:   %sub = sub i32 %Phi7, 3] [6:   %eq = icmp eq i32 %Phi, 1] [7:   %3 = icmp ne i32 %zext10, 0] [9:   %eq13 = icmp eq i32 %Phi2, 0] [10:   %4 = icmp ne i32 %zext14, 0]
+  OUT: [3:   %lt3 = icmp slt i32 %Phi2, 2] [4:   %2 = icmp ne i32 %zext4, 0] [5:   %sub = sub i32 %Phi7, 3] [6:   %eq = icmp eq i32 %Phi, 1] [7:   %3 = icmp ne i32 %zext10, 0] [9:   %eq13 = icmp eq i32 %Phi2, 0] [10:   %4 = icmp ne i32 %zext14, 0]
+

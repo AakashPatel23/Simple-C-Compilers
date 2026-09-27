@@ -1,0 +1,19 @@
+// opt20.usc
+// switch-case-4
+
+int main(){
+    char letter = 'i';
+    switch (letter) {
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+            printf("It's a vowel.\n");
+            break;
+        default:
+            printf("It's a consonant.\n");
+            break;
+    }
+    return 0;
+}

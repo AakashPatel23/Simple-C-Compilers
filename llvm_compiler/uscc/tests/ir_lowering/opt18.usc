@@ -1,0 +1,19 @@
+// opt18.usc
+// switch-case-2
+
+int main(){
+    int i = 2;
+    switch (i) {
+        case 1:
+            printf("Guest access enabled.\n");
+        case 2:
+            printf("User access enabled.\n");
+        case 3:
+            printf("Admin access enabled.\n");
+            break;
+        case 4:
+            printf("Superuser access enabled.\n");
+            break;
+    }
+    return 0;
+}

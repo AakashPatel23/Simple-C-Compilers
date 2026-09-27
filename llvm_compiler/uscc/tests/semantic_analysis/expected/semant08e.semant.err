@@ -1,0 +1,9 @@
+semant08e.usc:17:8: error: Cannot assign an expression of type char[] to int
+	int x = "This is a string";
+	      ^
+semant08e.usc:18:4: error: Cannot assign an expression of type char[] to int
+	x = "This is also a string";
+	  ^
+semant08e.usc:20:13: warn: warning: declaration of 'x' shadows a previous declaration
+        int x = 400;
+            ^

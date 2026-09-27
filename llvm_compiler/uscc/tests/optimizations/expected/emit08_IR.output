@@ -1,0 +1,40 @@
+; ModuleID = 'main'
+
+@.str = private unnamed_addr constant [4 x i8] c"%d\0A\00"
+
+declare i32 @printf(i8*, ...)
+
+define i32 @main() {
+entry:
+  br label %while.cond
+
+while.cond:                                       ; preds = %if.end4, %entry
+  %Phi = phi i32 [ %add, %if.end4 ], [ 0, %entry ]
+  %lt = icmp slt i32 %Phi, 3
+  %zext = zext i1 %lt to i32
+  %0 = icmp ne i32 %zext, 0
+  br i1 %0, label %while.body, label %while.end
+
+while.body:                                       ; preds = %while.cond
+  %eq = icmp eq i32 %Phi, 1
+  %zext1 = zext i1 %eq to i32
+  %1 = icmp ne i32 %zext1, 0
+  br i1 %1, label %if.then, label %if.end
+
+while.end:                                        ; preds = %while.cond
+  %2 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([4 x i8]* @.str, i32 0, i32 0), i32 20)
+  ret i32 0
+
+if.then:                                          ; preds = %while.body
+  br label %if.end
+
+if.end:                                           ; preds = %if.then, %while.body
+  %add = add i32 %Phi, 1
+  br label %if.then3
+
+if.then3:                                         ; preds = %if.end
+  br label %if.end4
+
+if.end4:                                          ; preds = %if.then3
+  br label %while.cond
+}

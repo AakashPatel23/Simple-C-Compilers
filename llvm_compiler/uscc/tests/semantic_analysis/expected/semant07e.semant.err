@@ -1,0 +1,9 @@
+semant07e.usc:20:11: error: 'x' is not an array
+	int z = x[0] + y();
+	         ^
+semant07e.usc:20:18: error: 'y' is not a function
+	int z = x[0] + y();
+	                ^
+semant07e.usc:23:13: warn: warning: declaration of 'a' shadows a previous declaration
+        int a = 30;
+            ^

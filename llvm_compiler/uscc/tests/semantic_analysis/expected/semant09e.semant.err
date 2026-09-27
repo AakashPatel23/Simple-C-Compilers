@@ -1,0 +1,9 @@
+semant09e.usc:24:4: error: Reassignment of arrays is not allowed
+	x = "This is also a string";
+	  ^
+semant09e.usc:26:6: error: a is not an array
+    a[10] = 20;
+     ^
+semant09e.usc:25:14: warn: warning: ignoring return value of function 'compute'
+    compute();
+             ^
